@@ -1,0 +1,112 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Entity", "MeshkatEnterprise.Booklet.Entity\MeshkatEnterprise.Booklet.Entity.csproj", "{2C255C2D-8115-445C-93A4-7E97B08ED162}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Persistence", "MeshkatEnterprise.Booklet.Persistence\MeshkatEnterprise.Booklet.Persistence.csproj", "{D864BF36-0DED-4E2E-94FD-AB1B8EAD4378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Persistence.Sql", "MeshkatEnterprise.Booklet.Persistence.Sql\MeshkatEnterprise.Booklet.Persistence.Sql.csproj", "{EF8AD7E5-F5A9-43FA-BABC-3634E43C515C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Security", "MeshkatEnterprise.Booklet.Security\MeshkatEnterprise.Booklet.Security.csproj", "{34785D07-1227-4A98-B6E2-00FBBD9E5124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Service", "MeshkatEnterprise.Booklet.Service\MeshkatEnterprise.Booklet.Service.csproj", "{6C278880-16EC-4C9A-9361-5C0C31AD7E64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Service.Impl", "MeshkatEnterprise.Booklet.Service.Impl\MeshkatEnterprise.Booklet.Service.Impl.csproj", "{007CC1C5-7AE6-4C4B-9758-C761434D7B76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Service.UnitTest", "MeshkatEnterprise.Booklet.Service.UnitTest\MeshkatEnterprise.Booklet.Service.UnitTest.csproj", "{D1EC87F8-502C-4432-A43B-F78DF92B7997}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.UI.MVC", "MeshkatEnterprise.Booklet.UI.MVC\MeshkatEnterprise.Booklet.UI.MVC.csproj", "{FBF30122-2E53-4602-8010-36F51C0D84FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Index", "MeshkatEnterprise.Booklet.Index\MeshkatEnterprise.Booklet.Index.csproj", "{2E101B4B-8141-47E3-B654-27254E512719}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Search", "MeshkatEnterprise.Booklet.Search\MeshkatEnterprise.Booklet.Search.csproj", "{8C347F66-B701-4151-B975-F238C68F1D77}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://46.32.31.119:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MeshkatEnterprise.Booklet.Entity\\MeshkatEnterprise.Booklet.Entity.csproj
+		SccProjectName1 = MeshkatEnterprise.Booklet.Entity
+		SccLocalPath1 = MeshkatEnterprise.Booklet.Entity
+		SccProjectUniqueName2 = MeshkatEnterprise.Booklet.Persistence.Sql\\MeshkatEnterprise.Booklet.Persistence.Sql.csproj
+		SccProjectName2 = MeshkatEnterprise.Booklet.Persistence.Sql
+		SccLocalPath2 = MeshkatEnterprise.Booklet.Persistence.Sql
+		SccProjectUniqueName3 = MeshkatEnterprise.Booklet.Persistence\\MeshkatEnterprise.Booklet.Persistence.csproj
+		SccProjectName3 = MeshkatEnterprise.Booklet.Persistence
+		SccLocalPath3 = MeshkatEnterprise.Booklet.Persistence
+		SccProjectUniqueName4 = MeshkatEnterprise.Booklet.Security\\MeshkatEnterprise.Booklet.Security.csproj
+		SccProjectName4 = MeshkatEnterprise.Booklet.Security
+		SccLocalPath4 = MeshkatEnterprise.Booklet.Security
+		SccProjectUniqueName5 = MeshkatEnterprise.Booklet.Service.Impl\\MeshkatEnterprise.Booklet.Service.Impl.csproj
+		SccProjectName5 = MeshkatEnterprise.Booklet.Service.Impl
+		SccLocalPath5 = MeshkatEnterprise.Booklet.Service.Impl
+		SccProjectUniqueName6 = MeshkatEnterprise.Booklet.Service\\MeshkatEnterprise.Booklet.Service.csproj
+		SccProjectName6 = MeshkatEnterprise.Booklet.Service
+		SccLocalPath6 = MeshkatEnterprise.Booklet.Service
+		SccProjectUniqueName7 = MeshkatEnterprise.Booklet.Service.UnitTest\\MeshkatEnterprise.Booklet.Service.UnitTest.csproj
+		SccProjectName7 = MeshkatEnterprise.Booklet.Service.UnitTest
+		SccLocalPath7 = MeshkatEnterprise.Booklet.Service.UnitTest
+		SccProjectUniqueName8 = MeshkatEnterprise.Booklet.UI.MVC\\MeshkatEnterprise.Booklet.UI.MVC.csproj
+		SccProjectName8 = MeshkatEnterprise.Booklet.UI.MVC
+		SccLocalPath8 = MeshkatEnterprise.Booklet.UI.MVC
+		SccProjectUniqueName9 = MeshkatEnterprise.Booklet.Index\\MeshkatEnterprise.Booklet.Index.csproj
+		SccProjectName9 = MeshkatEnterprise.Booklet.Index
+		SccLocalPath9 = MeshkatEnterprise.Booklet.Index
+		SccProjectUniqueName10 = MeshkatEnterprise.Booklet.Search\\MeshkatEnterprise.Booklet.Search.csproj
+		SccProjectName10 = MeshkatEnterprise.Booklet.Search
+		SccLocalPath10 = MeshkatEnterprise.Booklet.Search
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C255C2D-8115-445C-93A4-7E97B08ED162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C255C2D-8115-445C-93A4-7E97B08ED162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C255C2D-8115-445C-93A4-7E97B08ED162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C255C2D-8115-445C-93A4-7E97B08ED162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D864BF36-0DED-4E2E-94FD-AB1B8EAD4378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D864BF36-0DED-4E2E-94FD-AB1B8EAD4378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D864BF36-0DED-4E2E-94FD-AB1B8EAD4378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D864BF36-0DED-4E2E-94FD-AB1B8EAD4378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8AD7E5-F5A9-43FA-BABC-3634E43C515C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8AD7E5-F5A9-43FA-BABC-3634E43C515C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8AD7E5-F5A9-43FA-BABC-3634E43C515C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8AD7E5-F5A9-43FA-BABC-3634E43C515C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34785D07-1227-4A98-B6E2-00FBBD9E5124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34785D07-1227-4A98-B6E2-00FBBD9E5124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34785D07-1227-4A98-B6E2-00FBBD9E5124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34785D07-1227-4A98-B6E2-00FBBD9E5124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C278880-16EC-4C9A-9361-5C0C31AD7E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C278880-16EC-4C9A-9361-5C0C31AD7E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C278880-16EC-4C9A-9361-5C0C31AD7E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C278880-16EC-4C9A-9361-5C0C31AD7E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007CC1C5-7AE6-4C4B-9758-C761434D7B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007CC1C5-7AE6-4C4B-9758-C761434D7B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007CC1C5-7AE6-4C4B-9758-C761434D7B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007CC1C5-7AE6-4C4B-9758-C761434D7B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EC87F8-502C-4432-A43B-F78DF92B7997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EC87F8-502C-4432-A43B-F78DF92B7997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EC87F8-502C-4432-A43B-F78DF92B7997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EC87F8-502C-4432-A43B-F78DF92B7997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF30122-2E53-4602-8010-36F51C0D84FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF30122-2E53-4602-8010-36F51C0D84FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF30122-2E53-4602-8010-36F51C0D84FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF30122-2E53-4602-8010-36F51C0D84FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E101B4B-8141-47E3-B654-27254E512719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E101B4B-8141-47E3-B654-27254E512719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E101B4B-8141-47E3-B654-27254E512719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E101B4B-8141-47E3-B654-27254E512719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C347F66-B701-4151-B975-F238C68F1D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C347F66-B701-4151-B975-F238C68F1D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C347F66-B701-4151-B975-F238C68F1D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C347F66-B701-4151-B975-F238C68F1D77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

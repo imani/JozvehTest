@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<CompositionInfo xmlns="http://www.compositional.net/schema/compositionXml.1.0.xsd">
+
+  <UsingAssembly fullName="MeshkatEnterprise.Infrastructure.Interception" />
+  <Using namespace="MeshkatEnterprise.Infrastructure.Interception" />
+  <Using namespace="MeshkatEnterprise.Infrastructure.Interception.Persistence" />
+  <Using namespace="MeshkatEnterprise.Infrastructure.Interception.Exception" />
+  <Using namespace="MeshkatEnterprise.Infrastructure.Interception.Security" />
+
+  <!--Security Interceptor-->
+  <!--<RegisterCompositionListener name="SecurityHandlingListener" objectType="SecurityHandlingCompositionListener">
+    <Property name="IncludedContracts" objectType="FullNamePatternTypeFilter">
+      <Property name="Pattern" string="^MeshkatEnterprise\.Booklet\.Service\.I[a-z|A-Z].*Service|MeshkatEnterprise\.Security\.Service\.I[a-z|A-Z].*Service$" />
+    </Property>
+    <Property name="ContextIndicator" objectType="ContextIndicator">
+      <Property name="Data" dictionaryKeyType="System.String" dictionaryValueType="System.String">
+        <Item>
+          <Key>
+            <String>MeshkatEnterprise.Security.Service</String>
+          </Key>
+          <Value>
+            <String>Meshkat-Security</String>
+          </Value>
+        </Item>
+        <Item>
+          <Key>
+            <String>MeshkatEnterprise.Booklet.Service</String>
+          </Key>
+          <Value>
+            <String>Meshkat</String>
+          </Value>
+        </Item>
+      </Property>
+    </Property>
+  </RegisterCompositionListener>-->
+
+
+  <!--Persistence Interceptor-->
+  <RegisterCompositionListener name="PersistingListener" objectType="PersistingCompositionListener">
+    <Property name="IncludedContracts" objectType="FullNamePatternTypeFilter">
+      <Property name="Pattern" string="^MeshkatEnterprise.Booklet\.Service\.I[a-z|A-Z].*Service|MeshkatEnterprise\.Security\.Service|API\.I[a-z|A-Z].*Service$" />
+    </Property>
+    <Property name="ContextIndicator" objectType="ContextIndicator">
+      <Property name="Data" dictionaryKeyType="System.String" dictionaryValueType="System.String">
+        <Item>
+          <Key>
+            <String>MeshkatEnterprise.Security.Service</String>
+          </Key>
+          <Value>
+            <String>Meshkat</String>
+          </Value>
+        </Item>
+        <Item>
+          <Key>
+            <String>MeshkatEnterprise.Booklet.Service</String>
+          </Key>
+          <Value>
+            <String>Meshkat</String>
+          </Value>
+        </Item>
+        <Item>
+          <Key>
+            <String>MeshkatEnterprise.Security.API</String>
+          </Key>
+          <Value>
+            <String>Meshkat</String>
+          </Value>
+        </Item>
+      </Property>
+    </Property>
+    <Property name="MethodRules" dictionaryKeyType="INameFilter" dictionaryValueType="TransactionalBehavior">
+      <Item>
+        <Key objectType="PatternNameFilter">
+          <Property name="Pattern" string="^Get|Search|Auth|Verify.*$" />
+        </Key>
+        <Value enumType="TransactionalBehavior" enumValue="NotSupported" />
+      </Item>
+    </Property>
+  </RegisterCompositionListener>
+
+
+  <!--Exception Interceptor-->
+  <RegisterCompositionListener name="ExceptionHandlingListener" objectType="ExceptionHandlingCompositionListener">
+    <Property name="IncludedContracts" objectType="FullNamePatternTypeFilter">
+      <Property name="Pattern" string="^MeshkatEnterprise\.Booklet\.Service\.I[a-z|A-Z].*Service$" />
+    </Property>
+  </RegisterCompositionListener>
+
+  <!--General Assemblies-->
+  <RegisterAssembly fullName="MeshkatEnterprise.Booklet.Service.Impl" />
+  <RegisterAssembly fullName="MeshkatEnterprise.Booklet.Persistence.Sql" />
+  <!--<RegisterAssembly fullName="MeshkatEnterprise.Booklet.Security" />-->
+
+  <RegisterAssembly fullName="MeshkatEnterprise.Security.Service.Impl" />
+  <RegisterAssembly fullName="MeshkatEnterprise.Security.Persistence.Sql" />
+  <RegisterAssembly fullName="MeshkatEnterprise.Security.API.Impl" />
+
+  <SetVariable name="TokenExpirationSpan" uInt16="20160" />
+  
+  <!--Persistnce Context-->
+  <RegisterComponent type="SqlPersistenceContext" contractName="Meshkat">
+    <ConfigurationPoint name="ConnectionString">
+      <String>Data Source=.;Initial Catalog=MeshkatDB-Booklet-UnitTest;Integrated Security=true;</String>
+    </ConfigurationPoint>
+  </RegisterComponent>
+  
+  <SetVariable name="TokenExpirationSpan" uInt16="20" />
+
+  <SetVariable name="ScheduleStartDayColor" string="228b22" />
+  <SetVariable name="ScheduleEndDayColor" string="dc143c" />
+  <SetVariable name="ScheduleDayColor" string="fff5ee" />
+  <SetVariable name="DATA" string="Z:\Search\Data\" />
+  <SetVariable name="INDEX" string="Z:\Search\Index" />
+</CompositionInfo>

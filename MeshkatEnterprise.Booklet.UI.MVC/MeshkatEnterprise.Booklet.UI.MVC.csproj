@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBF30122-2E53-4602-8010-36F51C0D84FF}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MeshkatEnterprise.Booklet.UI.MVC</RootNamespace>
+    <AssemblyName>MeshkatEnterprise.Booklet.UI.MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Compositional.Composer">
+      <HintPath>Z:\Assemblies\Compositional.Composer.dll</HintPath>
+    </Reference>
+    <Reference Include="Compositional.Composer.Implementation">
+      <HintPath>Z:\Assemblies\Compositional.Composer.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Infrastructure.General, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Infrastructure.General.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Infrastructure.Web">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Infrastructure.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.API.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.API.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.API.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Persistence, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Persistence.Sql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Persistence.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Service.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Service.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Booklet\BookletAreaRegistration.cs" />
+    <Compile Include="Areas\Booklet\Controllers\BookCommentController.cs" />
+    <Compile Include="Areas\Booklet\Controllers\BookHighlightController.cs" />
+    <Compile Include="Areas\Booklet\Controllers\BookParagraphController.cs" />
+    <Compile Include="Areas\Booklet\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Booklet\Controllers\PersonController.cs" />
+    <Compile Include="Areas\Booklet\Controllers\SearchController.cs" />
+    <Compile Include="Areas\Security\SecurityAreaRegistration.cs" />
+    <Compile Include="Areas\Security\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Booklet\Controllers\BookTableOfContentController.cs" />
+    <Compile Include="Areas\Booklet\Controllers\BookVolumeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <EmbeddedResource Include="Composition-Release.xml" />
+    <EmbeddedResource Include="Composition-Base.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Composition-Debug.xml" />
+    <Content Include="App_GlobalResources\Resource.fa-IR.xml" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\backbone-associations-min.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\ladda.min.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\spin.min.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\book.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookComment.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookCommentField.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookCommentFieldValue.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookCommentSubject.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookCommentType.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\footnote.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookHighlight.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookParagraph.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookParagraphsBlock.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookSectionStyle.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookTableOfContent.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\person.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\searchResultItems.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\section.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\stateItem.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\ui\bookPage.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\userPreference.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\blockView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\commentItemView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\editCommentView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\pageView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\paragraphView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\searchResultItemView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\searchView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\timeoutView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\volumeView.js" />
+    <Content Include="Areas\Booklet\Views\Styles\comment.css" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ajax-loader.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui-overwrite.css" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Areas\Booklet\Views\Styles\ladda-themeless.min.css" />
+    <Content Include="Areas\Booklet\Views\Styles\meshkatBook.css" />
+    <Content Include="Areas\Files\Images\88101102.png" />
+    <Content Include="Areas\Files\Images\88101103.png" />
+    <Content Include="Areas\Files\Images\88101105.png" />
+    <Content Include="Areas\Files\Images\88101106.png" />
+    <Content Include="Areas\Files\Images\88101107.png" />
+    <Content Include="Areas\Files\Images\88101111.png" />
+    <Content Include="Areas\Files\Images\88102101.png" />
+    <Content Include="Areas\Files\Images\88102102.png" />
+    <Content Include="Areas\Files\Images\88102103.png" />
+    <Content Include="Areas\Files\Images\88102104.png" />
+    <Content Include="Areas\Files\Images\88102105.png" />
+    <Content Include="Areas\Files\Images\88102106.png" />
+    <Content Include="Areas\Files\Images\88102107.png" />
+    <Content Include="Areas\Files\Images\88102108.png" />
+    <Content Include="Areas\Files\Images\88102109.png" />
+    <Content Include="Areas\Files\Images\88102110.png" />
+    <Content Include="Areas\Files\Images\88102111.png" />
+    <Content Include="Areas\Files\Images\88102112.png" />
+    <Content Include="Areas\Files\Images\88102113.png" />
+    <Content Include="Areas\Files\Images\88102114.png" />
+    <Content Include="Areas\Files\Images\88102115.png" />
+    <Content Include="Areas\Files\Images\88102116.png" />
+    <Content Include="Areas\Files\Images\88102117.png" />
+    <Content Include="Areas\Files\Images\88102118.png" />
+    <Content Include="Areas\Files\Images\88102119.png" />
+    <Content Include="Areas\Files\Images\88102120.png" />
+    <Content Include="Areas\Files\Images\88102121.png" />
+    <Content Include="Areas\Files\Images\88102122.png" />
+    <Content Include="Areas\Files\Images\88102123.png" />
+    <Content Include="Areas\Files\Images\88102124.png" />
+    <Content Include="Areas\Files\Images\88102125.png" />
+    <Content Include="Areas\Files\Images\88102126.png" />
+    <Content Include="Areas\Files\Images\88102127.png" />
+    <Content Include="Areas\Files\Images\88102128.png" />
+    <Content Include="Areas\Files\Images\88102129.png" />
+    <Content Include="Areas\Files\Images\88102130.png" />
+    <Content Include="Areas\Files\Images\88102131.png" />
+    <Content Include="Areas\Files\Images\88102132.png" />
+    <Content Include="Areas\Files\Images\88102133.png" />
+    <Content Include="Areas\Files\Images\88102134.png" />
+    <Content Include="Areas\Files\Images\88102135.png" />
+    <Content Include="Areas\Files\Images\88102136.png" />
+    <Content Include="Areas\Files\Images\88102137.png" />
+    <Content Include="Areas\Files\Images\88102138.png" />
+    <Content Include="Areas\Files\Images\88102139.png" />
+    <Content Include="Areas\Files\Images\88102140.png" />
+    <Content Include="Areas\Files\Images\88102141.png" />
+    <Content Include="Areas\Files\Images\88102142.png" />
+    <Content Include="Areas\Files\Images\88102143.png" />
+    <Content Include="Areas\Files\Images\88103101.png" />
+    <Content Include="Areas\Files\Images\88103104.png" />
+    <Content Include="Areas\Files\Images\88103105.png" />
+    <Content Include="Areas\Files\Images\90101110.png" />
+    <Content Include="Areas\Files\Images\90102101.png" />
+    <Content Include="Areas\Files\Images\90102102.png" />
+    <Content Include="Areas\Files\Images\90102103.png" />
+    <Content Include="Areas\Files\Images\90102104.png" />
+    <Content Include="Areas\Files\Images\90102105.png" />
+    <Content Include="Areas\Files\Images\90102106.png" />
+    <Content Include="Areas\Files\Images\90102107.png" />
+    <Content Include="Areas\Files\Images\90102108.png" />
+    <Content Include="Areas\Files\Images\90102109.png" />
+    <Content Include="Areas\Files\Images\90102110.png" />
+    <Content Include="Areas\Files\Images\90102111.png" />
+    <Content Include="Areas\Files\Images\90102112.png" />
+    <Content Include="Areas\Files\Images\90102113.png" />
+    <Content Include="Areas\Files\Images\90102114.png" />
+    <Content Include="Areas\Files\Images\90102115.png" />
+    <Content Include="Areas\Files\Images\90102116.png" />
+    <Content Include="Areas\Files\Images\90102117.png" />
+    <Content Include="Areas\Files\Images\90102118.png" />
+    <Content Include="Areas\Files\Images\90102119.png" />
+    <Content Include="Areas\Files\Images\90102120.png" />
+    <Content Include="Areas\Files\Images\90102121.png" />
+    <Content Include="Areas\Files\Images\90102122.png" />
+    <Content Include="Areas\Files\Images\90102123.png" />
+    <Content Include="Areas\Files\Images\90102124.png" />
+    <Content Include="Areas\Files\Images\90102125.png" />
+    <Content Include="Areas\Files\Images\90102126.png" />
+    <Content Include="Areas\Files\Images\90102127.png" />
+    <Content Include="Areas\Files\Images\90102128.png" />
+    <Content Include="Areas\Files\Images\90102129.png" />
+    <Content Include="Areas\Files\Images\90102130.png" />
+    <Content Include="Areas\Files\Images\90102131.png" />
+    <Content Include="Areas\Files\Images\90102132.png" />
+    <Content Include="Areas\Files\Images\90102133.png" />
+    <Content Include="Areas\Files\Images\90102134.png" />
+    <Content Include="Areas\Files\Images\90102135.png" />
+    <Content Include="Areas\Files\Images\90102136.png" />
+    <Content Include="Areas\Files\Images\90102137.png" />
+    <Content Include="Areas\Files\Images\90102138.png" />
+    <Content Include="Areas\Files\Images\90102139.png" />
+    <Content Include="Areas\Files\Images\90102140.png" />
+    <Content Include="Areas\Files\Images\90102141.png" />
+    <Content Include="Areas\Files\Images\90102142.png" />
+    <Content Include="Areas\Files\Images\90102143.png" />
+    <Content Include="Areas\Files\Images\90102144.png" />
+    <Content Include="Areas\Files\Images\90102145.png" />
+    <Content Include="Areas\Files\Images\90102146.png" />
+    <Content Include="Areas\Files\Images\90102147.png" />
+    <Content Include="Areas\Files\Images\90102148.png" />
+    <Content Include="Areas\Files\Images\90102149.png" />
+    <Content Include="Areas\Files\Images\90102150.png" />
+    <Content Include="Areas\Files\Images\90102151.png" />
+    <Content Include="Areas\Files\Images\90102152.png" />
+    <Content Include="Areas\Files\Images\90102153.png" />
+    <Content Include="Areas\Files\Images\90102154.png" />
+    <Content Include="Areas\Files\Images\90102155.png" />
+    <Content Include="Areas\Files\Images\90102156.png" />
+    <Content Include="Areas\Files\Images\92101105.png" />
+    <Content Include="Areas\Files\Images\Master.png" />
+    <Content Include="general.js" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\icons-rtl.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\icons.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\loading.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\ui.fancytree.css" />
+    <Content Include="Areas\Booklet\Views\Scripts\app.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\backbone-min.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\fancytree\jquery.fancytree.min.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\jquery-1.10.2.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\jquery-ui-1.10.4.min.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\jquery.ambiance.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\jquery.ba-outside-events.min.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\jquery.blockUI.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\jquery.dynatree.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\jquery.layout-latest.min.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\jquery.mousewheel.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\meshkatTab.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\rangy-core.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\renderEngine.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\Lib\underscore-min.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\models\bookVolume.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\appView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\bookletView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\commentsView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\tableOfContentView.js" />
+    <Content Include="Areas\Booklet\Views\Scripts\views\topBarView.js" />
+    <Content Include="Areas\Booklet\Views\Styles\booklet.css" />
+    <Content Include="Areas\Booklet\Views\Styles\dynatree\icons-rtl-.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\dynatree\icons-rtl.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\dynatree\icons.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\dynatree\loading.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\dynatree\ui.dynatree.css" />
+    <Content Include="Areas\Booklet\Views\Styles\dynatree\vline-rtl.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\dynatree\vline.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\book-close.png" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\book-open.png" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\rtl.css" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\vline-rtl.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\vline.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="Areas\Booklet\Views\Styles\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Booklet\Views\Styles\font-awesome.min.css" />
+    <Content Include="Areas\Booklet\Views\Styles\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Booklet\Views\Styles\images\animated-overlay.gif" />
+    <Content Include="Areas\Booklet\Views\Styles\images\security\key2.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\security\Logo.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\security\pass-icon.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\security\user-icon.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Areas\Booklet\Views\Styles\images\user.png" />
+    <Content Include="Areas\Booklet\Views\Styles\jquery.ambiance.css" />
+    <Content Include="Areas\Booklet\Views\Styles\layout-default-latest.css" />
+    <Content Include="Areas\Booklet\Views\Styles\Login.css" />
+    <Content Include="Areas\Booklet\Views\Styles\meshkatTab.css" />
+    <Content Include="Areas\Security\Views\Scripts\jquery-1.10.2.js" />
+    <Content Include="Areas\Security\Views\Scripts\jquery.ambiance.js" />
+    <Content Include="Areas\Security\Views\Styles\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Security\Views\Styles\jquery.ambiance.css" />
+    <Content Include="Areas\Security\Views\Styles\Login.css" />
+    <Content Include="Areas\Security\Views\Styles\Images\key2.png" />
+    <Content Include="Areas\Security\Views\Styles\Images\Logo.png" />
+    <Content Include="Areas\Security\Views\Styles\Images\pass-icon.png" />
+    <Content Include="Areas\Security\Views\Styles\Images\user-icon.png" />
+    <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <None Include="Scripts\jquery-2.1.0-vsdoc.js" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Entity\MeshkatEnterprise.Booklet.Entity.csproj">
+      <Project>{2C255C2D-8115-445C-93A4-7E97B08ED162}</Project>
+      <Name>MeshkatEnterprise.Booklet.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Persistence.Sql\MeshkatEnterprise.Booklet.Persistence.Sql.csproj">
+      <Project>{ef8ad7e5-f5a9-43fa-babc-3634e43c515c}</Project>
+      <Name>MeshkatEnterprise.Booklet.Persistence.Sql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Persistence\MeshkatEnterprise.Booklet.Persistence.csproj">
+      <Project>{d864bf36-0ded-4e2e-94fd-ab1b8ead4378}</Project>
+      <Name>MeshkatEnterprise.Booklet.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Security\MeshkatEnterprise.Booklet.Security.csproj">
+      <Project>{34785d07-1227-4a98-b6e2-00fbbd9e5124}</Project>
+      <Name>MeshkatEnterprise.Booklet.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Service.Impl\MeshkatEnterprise.Booklet.Service.Impl.csproj">
+      <Project>{007cc1c5-7ae6-4c4b-9758-c761434d7b76}</Project>
+      <Name>MeshkatEnterprise.Booklet.Service.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Service\MeshkatEnterprise.Booklet.Service.csproj">
+      <Project>{6c278880-16ec-4c9a-9361-5c0c31ad7e64}</Project>
+      <Name>MeshkatEnterprise.Booklet.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Account\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\AdobeArabic-Regular.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\AdobeArabic-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\AdobeArabic-Regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\BLotus.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\BLotus.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\BLotus.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\BMitra.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\BMitra.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\BMitra.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\BYekan.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\BYekan.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\BYekan.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\fontawesome-webfont.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\fontawesome-webfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\fontawesome-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\QuranFont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fonts\QuranFont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\AdobeArabic-Regular.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\AdobeArabic-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\AdobeArabic-Regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\BLotus.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\BLotus.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\BLotus.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\BMitra.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\BMitra.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\BMitra.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\BYekan.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\BYekan.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\BYekan.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\fontawesome-webfont.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\fontawesome-webfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\fontawesome-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\QuranFont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Security\Views\Styles\fonts\QuranFont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\ui.fancytree-w.less" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\ui.fancytree.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Booklet\Views\Scripts\collections\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8980</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8980/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

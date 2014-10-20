@@ -1,0 +1,5 @@
+C:\Users\pc 8\Source\Workspaces\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Entity\bin\Debug\MeshkatEnterprise.Booklet.Entity.dll
+C:\Users\pc 8\Source\Workspaces\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Entity\bin\Debug\MeshkatEnterprise.Booklet.Entity.pdb
+C:\Users\pc 8\Source\Workspaces\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.dll
+C:\Users\pc 8\Source\Workspaces\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.pdb
+C:\Users\pc 8\Source\Workspaces\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.csprojResolveAssemblyReference.cache

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86D6A600-D295-4538-8881-5D424E48F1D5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MeshkatEnterprise.Booklet.UI</RootNamespace>
+    <AssemblyName>MeshkatEnterprise.Booklet.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="login.html" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\collections\volumeList.js" />
+    <Content Include="Scripts\Lib\backbone-min.js" />
+    <Content Include="Scripts\Lib\fancytree\jquery.fancytree.min.js" />
+    <Content Include="Scripts\Lib\jquery-1.10.2.js" />
+    <Content Include="Scripts\Lib\jquery-ui-1.10.4.min.js" />
+    <Content Include="Scripts\Lib\jquery.ambiance.js" />
+    <Content Include="Scripts\Lib\jquery.ba-outside-events.min.js" />
+    <Content Include="Scripts\Lib\jquery.blockUI.js" />
+    <Content Include="Scripts\Lib\jquery.dynatree.js" />
+    <Content Include="Scripts\Lib\jquery.layout-latest.min.js" />
+    <Content Include="Scripts\Lib\jquery.mousewheel.js" />
+    <Content Include="Scripts\Lib\meshkatTab.js" />
+    <Content Include="Scripts\Lib\rangy-core.js" />
+    <Content Include="Scripts\Lib\renderEngine.js" />
+    <Content Include="Scripts\Lib\underscore-min.js" />
+    <Content Include="Scripts\models\volume.js" />
+    <Content Include="Scripts\views\appView.js" />
+    <Content Include="Scripts\views\bookletView.js" />
+    <Content Include="Scripts\views\commentsView.js" />
+    <Content Include="Scripts\views\tableOfContentView.js" />
+    <Content Include="Scripts\views\topBarView.js" />
+    <Content Include="Scripts\views\treeView.js" />
+    <Content Include="Styles\booklet.css" />
+    <Content Include="Styles\dynatree\icons-rtl-.gif" />
+    <Content Include="Styles\dynatree\icons-rtl.gif" />
+    <Content Include="Styles\dynatree\icons.gif" />
+    <Content Include="Styles\dynatree\loading.gif" />
+    <Content Include="Styles\dynatree\ui.dynatree.css" />
+    <Content Include="Styles\dynatree\vline-rtl.gif" />
+    <Content Include="Styles\dynatree\vline.gif" />
+    <Content Include="Styles\fancytree\book-close.png" />
+    <Content Include="Styles\fancytree\book-open.png" />
+    <Content Include="Styles\fancytree\rtl.css" />
+    <Content Include="Styles\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="Styles\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Styles\font-awesome.min.css" />
+    <Content Include="Styles\fonts\fontawesome-webfont.svg" />
+    <Content Include="Styles\images\ajax.gif" />
+    <Content Include="Styles\images\animated-overlay.gif" />
+    <Content Include="Styles\images\security\key2.png" />
+    <Content Include="Styles\images\security\Logo.png" />
+    <Content Include="Styles\images\security\pass-icon.png" />
+    <Content Include="Styles\images\security\user-icon.png" />
+    <Content Include="Styles\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\images\user.png" />
+    <Content Include="Styles\jquery-ui-1.10.4.min.css" />
+    <Content Include="Styles\jquery.ambiance.css" />
+    <Content Include="Styles\layout-default-latest.css" />
+    <Content Include="Styles\Login.css" />
+    <Content Include="Styles\meshkatTab.css" />
+    <Content Include="Styles\fancytree\icons-rtl.gif" />
+    <Content Include="Styles\fancytree\icons.gif" />
+    <Content Include="Styles\fancytree\loading.gif" />
+    <Content Include="Styles\fancytree\ui.fancytree.css" />
+    <Content Include="Styles\fancytree\vline-rtl.gif" />
+    <Content Include="Styles\fancytree\vline.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Styles\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Styles\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Styles\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <Content Include="Styles\fonts\AdobeArabic-Regular.otf" />
+    <Content Include="Styles\fonts\AdobeArabic-Regular.ttf" />
+    <Content Include="Styles\fonts\AdobeArabic-Regular.woff" />
+    <Content Include="Styles\fonts\BLotus.eot" />
+    <Content Include="Styles\fonts\BLotus.ttf" />
+    <Content Include="Styles\fonts\BLotus.woff" />
+    <Content Include="Styles\fonts\BMitra.eot" />
+    <Content Include="Styles\fonts\BMitra.ttf" />
+    <Content Include="Styles\fonts\BMitra.woff" />
+    <Content Include="Styles\fonts\BYekan.eot" />
+    <Content Include="Styles\fonts\BYekan.ttf" />
+    <Content Include="Styles\fonts\BYekan.woff" />
+    <Content Include="Styles\fonts\fontawesome-webfont.eot" />
+    <Content Include="Styles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Styles\fonts\fontawesome-webfont.woff" />
+    <Content Include="Styles\fonts\FontAwesome.otf" />
+    <Content Include="Styles\fonts\QuranFont.ttf" />
+    <Content Include="Styles\fonts\QuranFont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\fancytree\ui.fancytree.less" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2883/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

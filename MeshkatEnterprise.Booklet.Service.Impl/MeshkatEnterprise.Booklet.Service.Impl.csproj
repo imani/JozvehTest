@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{007CC1C5-7AE6-4C4B-9758-C761434D7B76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MeshkatEnterprise.Booklet.Service.Impl</RootNamespace>
+    <AssemblyName>MeshkatEnterprise.Booklet.Service.Impl</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Compositional.Composer, Version=1.0.827.3002, Culture=neutral, PublicKeyToken=6b6bb40930177b89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\Compositional.Composer.dll</HintPath>
+    </Reference>
+    <Reference Include="Compositional.Composer.Implementation, Version=1.0.827.3002, Culture=neutral, PublicKeyToken=6b6bb40930177b89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\Compositional.Composer.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Infrastructure.General, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Infrastructure.General.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.API">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookCommentServiceImpl.cs" />
+    <Compile Include="BookCommentTypeServiceImpl.cs" />
+    <Compile Include="BookHighlightServiceImpl.cs" />
+    <Compile Include="BookParagraphCache.cs" />
+    <Compile Include="BookParagraphServiceImpl.cs" />
+    <Compile Include="BookTableOfContentServiceImpl.cs" />
+    <Compile Include="BookVolumeServiceImpl.cs" />
+    <Compile Include="PersonServiceImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchServiceImpl.cs" />
+    <Compile Include="UserPreferenceServiceImpl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Entity\MeshkatEnterprise.Booklet.Entity.csproj">
+      <Project>{2C255C2D-8115-445C-93A4-7E97B08ED162}</Project>
+      <Name>MeshkatEnterprise.Booklet.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Persistence\MeshkatEnterprise.Booklet.Persistence.csproj">
+      <Project>{D864BF36-0DED-4E2E-94FD-AB1B8EAD4378}</Project>
+      <Name>MeshkatEnterprise.Booklet.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Search\MeshkatEnterprise.Booklet.Search.csproj">
+      <Project>{8c347f66-b701-4151-b975-f238c68f1d77}</Project>
+      <Name>MeshkatEnterprise.Booklet.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Service\MeshkatEnterprise.Booklet.Service.csproj">
+      <Project>{6C278880-16EC-4C9A-9361-5C0C31AD7E64}</Project>
+      <Name>MeshkatEnterprise.Booklet.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition=" '$(BuildingInsideVisualStudio)' != 'true' ">
+    <PostBuildEvent>Cmd /C Copy "$(TargetPath)" "C:\MeshkatRelease-Main\Assemblies"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(BuildingInsideVisualStudio)' == 'true' ">
+    <PostBuildEvent>Cmd /C Copy "$(TargetPath)" "Z:\Assemblies"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
