@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1EC87F8-502C-4432-A43B-F78DF92B7997}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MeshkatEnterprise.Booklet.Service.UnitTest</RootNamespace>
+    <AssemblyName>MeshkatEnterprise.Booklet.Service.UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Compositional.Composer">
+      <HintPath>Z:\Assemblies\Compositional.Composer.dll</HintPath>
+    </Reference>
+    <Reference Include="Compositional.Composer.Implementation">
+      <HintPath>Z:\Assemblies\Compositional.Composer.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Infrastructure.General">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Infrastructure.General.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.API.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.API.Impl">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.API.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Entity">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Persistence">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Persistence.Sql">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Persistence.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Service">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Service.Impl">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Service.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="BookParagraphUnitTest.cs" />
+    <Compile Include="ContextUtil.cs" />
+    <Compile Include="LoginUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableOfContentUnitTest.cs" />
+    <Compile Include="BookVolumeUnitTest.cs" />
+    <Compile Include="SearchUnitTest.cs" />
+    <Compile Include="BookHighlightUnitTest.cs" />
+    <Compile Include="BookCommentUnitTest.cs" />
+    <Compile Include="PersonUnitTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Entity\MeshkatEnterprise.Booklet.Entity.csproj">
+      <Project>{2c255c2d-8115-445c-93a4-7e97b08ed162}</Project>
+      <Name>MeshkatEnterprise.Booklet.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Persistence.Sql\MeshkatEnterprise.Booklet.Persistence.Sql.csproj">
+      <Project>{ef8ad7e5-f5a9-43fa-babc-3634e43c515c}</Project>
+      <Name>MeshkatEnterprise.Booklet.Persistence.Sql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Persistence\MeshkatEnterprise.Booklet.Persistence.csproj">
+      <Project>{d864bf36-0ded-4e2e-94fd-ab1b8ead4378}</Project>
+      <Name>MeshkatEnterprise.Booklet.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Security\MeshkatEnterprise.Booklet.Security.csproj">
+      <Project>{34785d07-1227-4a98-b6e2-00fbbd9e5124}</Project>
+      <Name>MeshkatEnterprise.Booklet.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Service.Impl\MeshkatEnterprise.Booklet.Service.Impl.csproj">
+      <Project>{007cc1c5-7ae6-4c4b-9758-c761434d7b76}</Project>
+      <Name>MeshkatEnterprise.Booklet.Service.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Service\MeshkatEnterprise.Booklet.Service.csproj">
+      <Project>{6c278880-16ec-4c9a-9361-5c0c31ad7e64}</Project>
+      <Name>MeshkatEnterprise.Booklet.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Composition.xml" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

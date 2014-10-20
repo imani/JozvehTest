@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<CompositionInfo xmlns="http://www.compositional.net/schema/compositionXml.1.0.xsd">
+
+  <Include assemblyName="MeshkatEnterprise.Booklet.UI.WebAPI.SelfHost" manifestResourceName="MeshkatEnterprise.Booklet.UI.WebAPI.SelfHost.Composition-Base.xml"/>
+
+  <!--Persistnce Context-->
+  <RegisterComponent type="SqlPersistenceContext" contractName="Meshkat">
+    <ConfigurationPoint name="ConnectionString">
+      <String>Data Source=172.20.1.252;Initial Catalog=MeshkatDB-Booklet;Integrated Security=false;user id=sa;password=110.110;</String>
+    </ConfigurationPoint>
+  </RegisterComponent>
+
+</CompositionInfo>

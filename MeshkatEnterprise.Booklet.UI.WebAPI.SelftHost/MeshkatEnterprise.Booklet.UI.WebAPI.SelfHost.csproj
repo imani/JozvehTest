@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08B962A2-DDD0-45C3-93FC-09E922B4849B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MeshkatEnterprise.Booklet.UI.WebAPI.SelfHost</RootNamespace>
+    <AssemblyName>MeshkatEnterprise.Booklet.UI.WebAPI.SelfHost</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Compositional.Composer">
+      <HintPath>Z:\Assemblies\Compositional.Composer.dll</HintPath>
+    </Reference>
+    <Reference Include="Compositional.Composer.Implementation">
+      <HintPath>Z:\Assemblies\Compositional.Composer.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Infrastructure.General, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Infrastructure.General.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Infrastructure.Interception">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Infrastructure.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Infrastructure.Web">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Infrastructure.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.API">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.API.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.API.Impl">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.API.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Entity">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Persistence">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Persistence.Sql">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Persistence.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Service">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshkatEnterprise.Security.Service.Impl">
+      <HintPath>Z:\Assemblies\MeshkatEnterprise.Security.Service.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.0.0\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.SelfHost, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.SelfHost.5.2.0\lib\net45\System.Web.Http.SelfHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicAuthorizationFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Entity\MeshkatEnterprise.Booklet.Entity.csproj">
+      <Project>{2c255c2d-8115-445c-93a4-7e97b08ed162}</Project>
+      <Name>MeshkatEnterprise.Booklet.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Persistence.Sql\MeshkatEnterprise.Booklet.Persistence.Sql.csproj">
+      <Project>{ef8ad7e5-f5a9-43fa-babc-3634e43c515c}</Project>
+      <Name>MeshkatEnterprise.Booklet.Persistence.Sql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Persistence\MeshkatEnterprise.Booklet.Persistence.csproj">
+      <Project>{d864bf36-0ded-4e2e-94fd-ab1b8ead4378}</Project>
+      <Name>MeshkatEnterprise.Booklet.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Security\MeshkatEnterprise.Booklet.Security.csproj">
+      <Project>{34785d07-1227-4a98-b6e2-00fbbd9e5124}</Project>
+      <Name>MeshkatEnterprise.Booklet.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Service.Dummy\MeshkatEnterprise.Booklet.Service.Dummy.csproj">
+      <Project>{e2c9a8b9-5117-477b-98b1-3b7d1438084d}</Project>
+      <Name>MeshkatEnterprise.Booklet.Service.Dummy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Service.Impl\MeshkatEnterprise.Booklet.Service.Impl.csproj">
+      <Project>{007cc1c5-7ae6-4c4b-9758-c761434d7b76}</Project>
+      <Name>MeshkatEnterprise.Booklet.Service.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Meshkat Source\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Service.UnitTest\MeshkatEnterprise.Booklet.Service.UnitTest.csproj">
+      <Project>{d1ec87f8-502c-4432-a43b-f78df92b7997}</Project>
+      <Name>MeshkatEnterprise.Booklet.Service.UnitTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshkatEnterprise.Booklet.Service\MeshkatEnterprise.Booklet.Service.csproj">
+      <Project>{6c278880-16ec-4c9a-9361-5c0c31ad7e64}</Project>
+      <Name>MeshkatEnterprise.Booklet.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Composition-Base.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Composition-Debug.xml" />
+    <EmbeddedResource Include="Composition-Release.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

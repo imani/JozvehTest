@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Dictionary>
+
+  <SECURITY_ERR_NUMBER_100>یکی از عملیات داخلی سیستم امنیت با مشکل مواجه شده است</SECURITY_ERR_NUMBER_100>
+  <SECURITY_ERR_NUMBER_101>نام کاربری و یا رمز عبور صحیح وارد نشده است</SECURITY_ERR_NUMBER_101>
+  <SECURITY_ERR_NUMBER_102>رمز جاری وارد شده صحیح نمی باشد</SECURITY_ERR_NUMBER_102>
+  <SECURITY_ERR_NUMBER_103>کاربر جاری می بایست مجدداً وارد سیستم شود</SECURITY_ERR_NUMBER_103>
+  <SECURITY_ERR_NUMBER_104>دسترسی مجاز نمی باشد</SECURITY_ERR_NUMBER_104>
+  <SECURITY_ERR_NUMBER_105>شناسه امنیت  وجود ندارد</SECURITY_ERR_NUMBER_105>
+  <SECURITY_ERR_NUMBER_106>رمز وارد شده تهی می باشد</SECURITY_ERR_NUMBER_106>
+  <SECURITY_ERR_NUMBER_107>قالب اهراز هویت تهی می باشد</SECURITY_ERR_NUMBER_107>
+
+</Dictionary>

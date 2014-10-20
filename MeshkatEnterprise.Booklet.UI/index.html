@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>جزوه</title>
+    <style id="bookletStyles" type="text/css">
+    </style>
+    <!---------------------------------- Style Sheets-------------------------------------->
+    <link href="Styles/jquery-ui-1.10.4.min.css" rel="stylesheet" />
+    <link href="Styles/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Styles/booklet.css" rel="stylesheet" />
+    <link href="Styles/dynatree/ui.dynatree.css" rel="stylesheet" />
+    <link href="Styles/meshkatTab.css" rel="stylesheet" />
+    <link href="Styles/jquery.ambiance.css" rel="stylesheet" />
+    <link href="Styles/fancytree/ui.fancytree.css" rel="stylesheet" />
+    <link href="Styles/fancytree/rtl.css" rel="stylesheet" />
+
+    <!---------------------------- External Libraries-------------------------------------->
+    <script src="Scripts/Lib/jquery-1.10.2.js"></script>
+    <script src="Scripts/Lib/jquery-ui-1.10.4.min.js"></script>
+    <script src="Scripts/Lib/underscore-min.js"></script>
+    <script src="Scripts/Lib/backbone-min.js"></script>
+    <script src="Scripts/Lib/jquery.ba-outside-events.min.js"></script>
+    <script src="Scripts/Lib/jquery.layout-latest.min.js"></script>
+    <script src="Scripts/Lib/jquery.dynatree.js"></script>
+    <script src="Scripts/Lib/jquery.mousewheel.js"></script>
+    <script src="Scripts/Lib/rangy-core.js"></script>
+    <script src="Scripts/Lib/meshkatTab.js"></script>
+    <script src="Scripts/Lib/renderEngine.js"></script>
+    <script src="Scripts/Lib/jquery.ambiance.js"></script>
+    <script src="Scripts/Lib/jquery.blockUI.js"></script>
+    <script src="Scripts/Lib/fancytree/jquery.fancytree.min.js"></script>
+
+    <!---------------------------- Application Scripts------------------------------------->
+    <script src="Scripts/app.js"></script>
+    <!-----Models--------->
+    <script src="Scripts/models/volume.js"></script>
+    <!-----Collections---->
+    <script src="Scripts/collections/volumeList.js"></script>
+    <!-----Views----------->
+    <script src="Scripts/views/appView.js"></script>
+    <script src="Scripts/views/tableOfContentView.js"></script>
+    <script src="Scripts/views/topBarView.js"></script>
+    <script src="Scripts/views/commentsView.js"></script>
+    <script src="Scripts/views/bookletView.js"></script>
+
+    <!---------------------------- Templates----------------------------------------------->
+
+</head>
+<body>
+    <div id="bookletApplication">
+        <div id="topBar" class="ui-layout-north">
+            
+            <div id="tableOfContentButton" class="ToolbarButton alignRight fa fa-list" title="فهرست مطالب"></div>
+            <div id="commentsButton" class="ToolbarButton alignRight fa fa-comments" title="توضیحات"></div>
+            <div id="searchBox">
+                <div id="searchButton" class="ToolbarButton alignRight fa fa-search" title="جستجو">
+                </div>
+
+                <input id="searchInput"  type="text"  placeholder="جستجو..." />
+            </div>
+        </div>
+        <div id="mainContent" class="ui-layout-center">
+            <div></div>
+            <div id="rightBar"></div>
+            <div id="leftBar"></div>
+            <div id="bookletPanel" class="ui-layout-center">
+
+            </div>
+            <div id="commentPanel" class="ui-layout-west">
+                <div class="ui-layout-north commentTopBar">
+                    <div id="commentModeButton" class="commentBarButton alignRight fa fa-comment" title="توضیح جدید"></div>
+                </div>
+                <div class="ui-layout-center">
+                </div>
+            </div>
+            <div id="tableOfContentPanel" class="ui-layout-east">
+                <div class="ui-layout-north">
+                    <input id="txtTOCSearch" placeholder="جستجو در فهرست ..." type="text" />
+                </div>
+                <div class="ui-layout-center">
+                    <div id="tableOfContentTree"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="messagePanel"></div>
+    <img id="userImage" src="../Styles/images/user.png" alt="user" />
+    <div id="userPanel">
+        <table style="width: 100%;">
+            <tr>
+                <td id="userName" style="width: 80%;">حامد حمایت کار</td>
+                <td id="logoutButton" style="width: 20%;" >خروج</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
