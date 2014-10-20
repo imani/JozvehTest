@@ -10,10 +10,10 @@
         events: {
             "click #btnCommentMode": "changeCommentMode",
             "click #btnCancelSaveComment": "changeCommentMode",
-            "click #btnSaveComment": "saveNewComment"
+            "click #btnSaveComment":"saveNewComment"
         },
         tplCommentItem: null,
-        selectedComment: null,
+        selectedComment:null,
         initialize: function () {
             this.tplCommentItem = $("#tplCommentItem");
             this.$el.layout({
@@ -26,8 +26,6 @@
                     size: '30'
                 }
             });
-
-
             this.render();
             //  $("#commentModeButton").on("Click", this.changeCommentMode());
         },
@@ -36,9 +34,6 @@
                 $('#btnCommentMode').addClass('commentBarButton-selected');
             else
                 $('#btnCommentMode').removeClass('commentBarButton-selected');
-
-
-
             return this;
         },
         renderCurrentComments: function (comments) {
@@ -65,12 +60,12 @@
                 if (app.bookletView.highlightMode) {
                     $("#btnHighlight").click();
                 }
-
                 $("#newCommentArea").show(500);
                 $("#currentCommentsPanel").animate({ scrollTop: 1000 }, 800, 'swing');
                 $("#txtNewComment").val("");
             }
-            else {
+            else
+            {
                 $("#newCommentArea").hide(500);
             }
             app.bookletView.clearCommentHighlights();
@@ -78,51 +73,91 @@
         },
         saveNewComment: function () {
             var that = this;
-            $("#txtNewComment").focus();
-            var newComment = new app.BookComment();
-            var commentSubject = new app.BookCommentSubject();
-            var commentType = new app.BookCommentType();
-            commentType.setBookCommentTypeId(1);
-            var commentFieldValue = new app.BookCommentFieldValue();
-            var bookParagraph = new app.BookParagraph();
-            var commentedSections = app.currentVolumeView.getCommentedSections();
-            newComment.setType(commentType);
-            newComment.setText($("#txtNewComment").text());
-            newComment.setSections(commentedSections);
-            showLoading();
-            $.ajax({
-                type: "POST",
-                url: ajaxPath.ADD_COMMENT,
-                dataType: "json",
-                data: JSON.stringify(newComment),
-                success: function (data) {
-                    if (!checkResponse(data)) return;
-                    hideLoading();
-                    
-                    //////////////////Update Block ////////////////////
-                    newComment.setId(data.ReturnValue);
-                    var block = app.currentVolumeView.currentBlockView.model.toJSON();
-                    block.Comments.push(newComment.toJSON());
-                    app.currentVolumeView.currentBlockView.model = new app.BookParagraphsBlock(block);
-                    app.currentVolumeView.currentBlockView.render();
-                    app.currentVolumeView.updatePage(true);
-                    ///////////////////////////////////////////////////
+            if ($("#txtNewComment").text().trim().length == 0) {
 
-                    that.changeCommentMode();
-                    showMessage(messageList.COMMENT_SAVED, "ثبت توضیح", "success");
-                },
+                $("#txtNewComment").addClass("error");
+            } else {
+                $("#txtNewComment").removeClass("error");
+
+                $("#txtNewComment").focus();
+                var newComment = new app.BookComment();
+                var commentSubject = new app.BookCommentSubject();
+                var commentType = new app.BookCommentType();
+                commentType.setBookCommentTypeId($("#cboNewCommentType").val());
+                var commentFieldValue = new app.BookCommentFieldValue();
+                var bookParagraph = new app.BookParagraph();
+                var commentedSections = app.currentVolumeView.getCommentedSections();
+                newComment.setType(commentType);
+                newComment.setText($("#txtNewComment").text());
+                newComment.setSections(commentedSections);
+                showLoading();
+                $.ajax({
+                    type: "POST",
+                    url: ajaxPath.ADD_COMMENT,
+                    dataType: "json",
+                    data: JSON.stringify(newComment),
+                    success: function(data) {
+
+                        if (!checkResponse(data)) return;
+
+                        //////////////////Update Block ////////////////////
+                        newComment.setId(data.ReturnValue);
+                        var block = app.currentVolumeView.currentBlockView.model.toJSON();
+                        block.Comments.push(newComment.toJSON());
+                        app.currentVolumeView.currentBlockView.model = new app.BookParagraphsBlock(block);
+                        app.currentVolumeView.currentBlockView.render();
+                        app.currentVolumeView.updatePage(true);
+                        ///////////////////////////////////////////////////
+
+                        hideLoading();
+                        that.changeCommentMode();
+                        showMessage(messageList.COMMENT_SAVED, "ثبت توضیح", "success");
+                    },
+                    error: function(data) {
+                        hideLoading();
+                        if (data.responseText === messageList.VERIFICATION_FAILED) {
+                            app.timeoutView.show();
+                            return false;
+                        }
+                        showMessage(messageList.CONNECTION_FAILED, messageList.ERROR, "error");
+                    },
+                    contentType: "application/json; charset=utf-8",
+                    cache: false
+                });
+            }
+
+        },
+        fillTypes: function(bookId,el) {
+            $(el).html("");
+            $(el).append("<option value=\"-1\">نامشخص</option>");
+            
+            $.ajax({
+                type: "GET",
+                url: ajaxPath.COMMENTTYPES_GET + "?bookId=" + bookId,
+                dataType: "json",
+                success:
+                    function (data) {
+                        if (!checkResponse(data)) return;
+                        var commentTypeList = data.ReturnValue;
+                        for (var i = 0; i < commentTypeList.length; i++) {
+                            var option = $('<option>', {
+                                value: commentTypeList[i].BookCommentTypeId,
+                                text: commentTypeList[i].BookCommentTypeTitle
+                            });
+                            // $(option).data('subjectRoot', commentTypeList[i].SubjectRoot);
+                            // $(option).data('commentFields', commentTypeList[i].BookCommentFields);
+                            $(el).append(option);
+                        }
+
+                    },
                 error: function (data) {
-                    hideLoading();
-                    if (data.responseText === messageList.VERIFICATION_FAILED) {
-                        app.timeoutView.show();
-                        return false;
-                    }
                     showMessage(messageList.CONNECTION_FAILED, messageList.ERROR, "error");
+                    hideLoading();
                 },
                 contentType: "application/json; charset=utf-8",
                 cache: false
             });
-
+            return el;
         }
     });
 })(jQuery);

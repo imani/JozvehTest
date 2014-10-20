@@ -23,7 +23,7 @@
                 },
                 north: {
                     size:"25"
-                },
+                }
             });
             this.$el.find(".btnCommentHeader").tooltip({
                 position: { my: "middle bottom", at: "right top" },
@@ -39,12 +39,15 @@
         },
         showOptions: function (e) {
             this.$el.find(".iconRemoveComment,.iconEditComment").show(100);
+            this.$el.find(".commentType").fadeIn();
             if (!this.$el.find(".commentItem").hasClass("commentItem-selected")) {
                 this.$el.find(".commentItem").addClass("commentItem-hover");
             }
         },
         hideOptions: function () {
+
             this.$el.find(".iconRemoveComment,.iconEditComment").hide(100);
+            this.$el.find(".commentType").fadeOut();
             this.$el.find(".commentItem").removeClass("commentItem-hover");
         },
         removeComment: function (e) {
@@ -59,7 +62,6 @@
                     function (data) {
                         if (!checkResponse(data)) return;
                         hideLoading();
-                        
                         //////////////////Update Block ////////////////////
                         var block = app.currentVolumeView.currentBlockView.model.toJSON();
                         block.Comments = _.without(block.Comments, _.findWhere(block.Comments, { Id: that.model.getId() }));
@@ -67,7 +69,6 @@
                         app.currentVolumeView.currentBlockView.render();
                         app.currentVolumeView.updatePage(true);
                         ///////////////////////////////////////////////////
-
                         that.$el.hide(200);
                         showMessage(messageList.COMMENT_REMOVED, "حذف توضیح", "success");
                         
@@ -87,7 +88,7 @@
         },
         showEditPanel: function (e) {
             e.stopPropagation();
-            var editCommentView = new app.EditCommentView({ model: this.model });
+            app.editCommentView.loadComment(this.model);
 
         },
         commentClicked: function (e) {

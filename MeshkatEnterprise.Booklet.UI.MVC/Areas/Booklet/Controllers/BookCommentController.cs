@@ -36,6 +36,13 @@ namespace MeshkatEnterprise.Booklet.UI.MVC.Areas.Booklet.Controllers
 
              return Json(ComponentContextBinder.Lookup().GetComponent<IBookCommentService>().AddComment(comment));
         }
+        
+        [AllowAnonymous]
+        [HttpGet]
+        public ActionResult GetCommentTypes(long bookId)
+        {
 
+            return Json(ComponentContextBinder.Lookup().GetComponent<IBookCommentTypeService>().GetCommentTypes(bookId), JsonRequestBehavior.AllowGet);
+        }
     }
 }

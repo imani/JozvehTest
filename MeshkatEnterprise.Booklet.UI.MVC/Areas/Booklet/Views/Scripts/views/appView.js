@@ -18,6 +18,7 @@ var app = app || {};
             app.commentsView = new app.CommentsView();
             app.searchView = new app.SearchView();
             app.timeoutView = new app.TimeoutView();
+            app.editCommentView = new app.EditCommentView();
             $(this.el).layout({
                 defaults: {
                     fxName: "slide",

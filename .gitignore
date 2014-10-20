@@ -23,3 +23,7 @@ MeshkatEnterprise.Booklet.Service/obj/
 *.vssscc
 packages/
 *.gif
+_UpgradeReport_Files/UpgradeReport.xslt
+_UpgradeReport_Files/UpgradeReport.css
+UpgradeLog.htm
+UpgradeLog.XML

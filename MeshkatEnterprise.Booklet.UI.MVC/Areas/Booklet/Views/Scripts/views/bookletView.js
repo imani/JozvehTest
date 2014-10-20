@@ -45,7 +45,9 @@
                             app.currentVolumeView = $(tab).data().view;
                             app.currentVolumeView.gotoParagraph(app.bookletView.TOC.getBookParagraphId());
                         }
-                        
+                        //fill CommentType Of ComboBox
+                        app.commentsView.fillTypes(app.currentVolumeView.model.getBook().getBookId(), $("#cboNewCommentType"));
+                        app.commentsView.fillTypes(app.currentVolumeView.model.getBook().getBookId(), $("#cboEditCommentType"));
                         app.currentVolumeView.on("pageChanged", function (comments) {
                             app.commentsView.renderCurrentComments(comments);
                         });

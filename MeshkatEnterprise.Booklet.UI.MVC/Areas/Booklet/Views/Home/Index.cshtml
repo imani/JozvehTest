@@ -119,22 +119,22 @@
     <script id="tplCommentItem" type="text/template">
         <div class="commentItem">
             <div class="ui-layout-north commentHeder">
-                <span class="commentTypeColor fa fa-circle">
-
+                <span class="commentTypeColor fa fa-circle"></span>
+                <span class="commenterName"><%=commentItem.getPersonName()%>
                 </span>
-                <span class="commenterName">
-                    <%=commentItem.getPersonName()%>
+                <span class="commentType">نوع توضیح : 
+                    <%=commentItem.getType().getBookCommentTypeTitle() %>
                 </span>
-                <span class="btnCommentHeader iconRemoveComment fa fa-times" style="float:left;" title="حذف"></span>
+                <span class="btnCommentHeader iconRemoveComment fa fa-times" style="float: left;" title="حذف"></span>
                 <span class="btnCommentHeader iconEditComment fa fa-pencil-square-o" title="ویرایش"></span>
             </div>
             <div class="ui-layout-center commentBody">
                 <%if(commentItem.getText().length<200) %>
                     <%=commentItem.getText() %>
-                    <% else {%>
+                <% else {%>
                     <%=commentItem.getText().substring(0,commentItem.getText().substr(0,200).lastIndexOf(" ")) %>
                     <span class="commentBody-more">(ادامه ...)</span>
-                    <% } %>
+                <% } %>
             </div>
         </div>
 
@@ -149,7 +149,6 @@
             <div id="btnHighlight" class="ToolbarButton alignRight fa fa-italic" title="برجسته کردن"></div>
             <div id="btnSearch" class="ToolbarButton alignRight fa fa-search" title="جستجو"></div>
             <input id="txtSearch" data-style="expand-left" type="text" placeholder="جستجو..." />
-
             <div id="pnlUser">
                 <img id="imgUser" src="~/Areas/Booklet/Views/Styles/images/user.png" alt="تصویر کاربر" />
                 <div id="pnlUserInfo">
@@ -174,6 +173,10 @@
                             ثبت توضیح
                         </div>
                         <div contenteditable="true" id="txtNewComment" class="comment"></div>
+                        <label>
+                            <select id="cboNewCommentType" class="commentTypeSelect">
+                            </select>
+                        </label>
                         <div id="commentOptionsDiv">
                             <button id="btnSaveComment" class="btn">تایید</button>
                             <button id="btnCancelSaveComment" class="btn cancelBtn">انصراف</button>
@@ -190,6 +193,12 @@
                             <div id="txtCommentEdit" contenteditable="true" class="txtEditComment"></div>
                         </div>
                         <div class="ui-layout-toggler-south">
+                            <label>
+                                <select id="cboEditCommentType" class="commentTypeSelect">
+                                </select>
+                            </label>
+                        </div>
+                        <div class=" editButtons ui-layout-toggler-south">
                             <button id="btnEditComment" class="btn">ویرایش</button>
                             <button id="btnCancelEditComment" class="btn cancelBtn">انصراف</button>
                         </div>

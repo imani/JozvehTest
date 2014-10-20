@@ -12,7 +12,7 @@
     REMOVE_COMMENT: "/Booklet/BookComment/RemoveComment",
     EDIT_COMMENT: "/Booklet/BookComment/EditComment",
     ADD_COMMENT: "/Booklet/BookComment/AddComment",
-
+    COMMENTTYPES_GET: "/Booklet/BookComment/GetCommentTypes",
     HIGHLIGHT_SAVE: "/Booklet/BookHighlight/AddHighlight",
     PERSON_GET:"/Booklet/Person/GetPerson"
 };
@@ -22,7 +22,8 @@ messageList = {
     CONNECTION_FAILED: "ارتباط با سرور برقرار نشد.",
     COMMENT_SAVED: "توضیح با موفقیت ثبت شد.",
     COMMENT_REMOVED: "توضیح حذف شد",
-    VERIFICATION_FAILED: "TokenVerificationFailed"
+    VERIFICATION_FAILED: "TokenVerificationFailed",
+    COMMENT_EDITED:"توضیح با موفقیت ویرایش شد"
 };
 
 function checkResponse(data) {

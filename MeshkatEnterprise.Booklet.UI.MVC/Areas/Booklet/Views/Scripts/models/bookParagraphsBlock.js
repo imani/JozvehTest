@@ -129,7 +129,6 @@
 
             if (block.Comments !== null) {
                 for (var i = 0; i < block.Comments.length; i++) {
-                    var sections = block.Comments[i].Sections;
                     for (var j = 0; j < block.Comments[i].Sections.length; j++) {
                         if (block.Comments[i].Sections[j].ParagraphId === block.Paragraphs[index].ParagraphId) {
                             block.Paragraphs[index].CommentSections.push(block.Comments[i].Sections[j]);

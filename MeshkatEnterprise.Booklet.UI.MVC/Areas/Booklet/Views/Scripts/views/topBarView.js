@@ -88,7 +88,6 @@
         txtSearchKeyDown: function (e) {
             if (e.which == 13) {
                 e.preventDefault();
-                
                 $("#bookletPanel").meshkatTab("addTab", "نتایج جستجو", app.searchView, 111);
                 app.searchView.loadResult($("#txtSearch").val(), 0, 20);
             }

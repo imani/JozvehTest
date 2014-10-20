@@ -130,9 +130,10 @@
                     hideLoading();
                     var nodes = loadedNode.ReturnValue;
                     var obj = {};
+                    //debugger;
                     var rootNode = $("#tableOfContentTree").fancytree("getRootNode");
                     var treeToc = $("#tableOfContentTree").fancytree("getTree");
-                    for (var i = nodes.length-1; i==0 ; i--) {
+                    for (var i = nodes.length-1; i>=0 ; i--) {
                         obj = { title: nodes[i].Title, ParentKey: nodes[i].ParentKey, key: nodes[i].Key, lazy: nodes[i].HasChild, tooltip: nodes[i].Title, icon: nodes[i].ParentKey ? 'book-open.png' : 'book-close.png', TOC: new app.BookTableOfContent(nodes[i]) };
                         if (obj.ParentKey != null && treeToc.getNodeByKey(obj.key.toString())==null)
                             treeToc.getNodeByKey(obj.ParentKey.toString()).addChildren(obj);

@@ -113,7 +113,7 @@
 
     }
     .txtEditComment {
-        height: 100%;
+
         width: 100%;
         border:1px ridge #b2b1b1;
         display: block;
@@ -122,6 +122,7 @@
         overflow-x: hidden;
         font-family: 'BYekan';
         margin-top: 2px;
+        height: 90%;
     }
     .editcommentTopBar {
       color: white;
@@ -140,6 +141,82 @@
     border: 0px;
     padding: 2px;
 }
+
 #currentCommentsPanel {
-    padding-left:7px;
+    padding-left: 7px;
+}
+#commentOptionsDiv {
+    float: left;
+}
+#editableContent {
+        height: 94%;
+        width: 100%;
+        border:1px ridge #b2b1b1;
+        display: block;
+        box-sizing: border-box;
+        margin-bottom: 1px;
+        overflow-x: hidden;
+        font-family: 'BYekan';
+        margin-top: 2px;
+    
+}
+
+.editButtons {
+    float: left;
+}
+.commentType {
+    display: none;
+    color:darkmagenta;
+    font-size: x-small;
+}
+	
+select {
+    float: right;
+    padding-right: 35px;
+     font-family: 'BYekan';
+    margin: 0;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+
+label {
+    position: relative;
+        float: right;
+    width: 50px;
+}
+label:after {
+    content:'<>';
+    font:10px "Consolas", monospace;
+    color:#aaa;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:2px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}
+label:before {
+    content:'';
+    right:6px; top:0px;
+    width:20px; height:20px;
+    background:#f8f8f8;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+.error {
+    border-style: solid;
+    border-color: red;
+   
 }
