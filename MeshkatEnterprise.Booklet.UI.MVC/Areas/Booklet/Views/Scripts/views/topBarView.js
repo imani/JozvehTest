@@ -72,14 +72,17 @@
         {
             this.btnSearchClicked = !this.btnSearchClicked;
             if (this.btnSearchClicked) {
-                $('#btnSearch').addClass("toolBarButtonSelected");
+                $("#btnSearch").addClass("toolBarButtonSelected");
+                $("#txtSearch").show();
                 $("#txtSearch").animate({ width: "300" }, 200);
                 $("#txtSearch").val('');
                 $("#txtSearch").focus();
             }
             else {
                 $('#btnSearch').removeClass("toolBarButtonSelected");
-                $("#txtSearch").animate({ width: "0" }, 200);
+                $("#txtSearch").animate({ width: "0" }, 200, function () {
+                    $("#txtSearch").hide();
+                });
             }
         },
         logOut: function ()

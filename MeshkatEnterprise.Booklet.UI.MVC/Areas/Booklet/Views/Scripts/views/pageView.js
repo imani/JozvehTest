@@ -33,11 +33,16 @@
             return this;
         },
         isShowing: function (baseHeight, top, bottom) {
-            var first = $(this.paragraphViews).first()[0];
-            var last = $(this.paragraphViews).last()[0];
-            if (!first.isShowing(baseHeight, top, bottom) && !last.isShowing(baseHeight, top, bottom))
+            var t = baseHeight + this.$el.position().top;
+            var b = t + this.$el.height();
+            var lb = Math.max(t, top);
+            var ub = Math.min(b, bottom);
+            if (lb >= ub || top === bottom)
                 return false;
-            return true;
+            var ratio = (ub - lb) / (bottom - top);
+            if (ratio >= .45)
+                return true;
+            return false;
         },
         isCurrentPage: function (baseHeight, top, bottom) {
             var first = $(this.paragraphViews).first()[0];

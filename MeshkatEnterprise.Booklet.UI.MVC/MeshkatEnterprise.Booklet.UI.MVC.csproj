@@ -210,6 +210,7 @@
     <Content Include="Areas\Booklet\Views\Scripts\views\timeoutView.js" />
     <Content Include="Areas\Booklet\Views\Scripts\views\volumeView.js" />
     <Content Include="Areas\Booklet\Views\Styles\comment.css" />
+    <Content Include="Areas\Booklet\Views\Styles\fancytree\ui.fancytree.min.css" />
     <Content Include="Areas\Booklet\Views\Styles\images\ajax-loader.gif" />
     <Content Include="Areas\Booklet\Views\Styles\jquery-ui-overwrite.css" />
     <Content Include="Areas\Booklet\Views\Styles\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -343,7 +344,6 @@
     <Content Include="Areas\Booklet\Views\Styles\fancytree\icons-rtl.gif" />
     <Content Include="Areas\Booklet\Views\Styles\fancytree\icons.gif" />
     <Content Include="Areas\Booklet\Views\Styles\fancytree\loading.gif" />
-    <Content Include="Areas\Booklet\Views\Styles\fancytree\ui.fancytree.css" />
     <Content Include="Areas\Booklet\Views\Scripts\app.js" />
     <Content Include="Areas\Booklet\Views\Scripts\Lib\backbone-min.js" />
     <Content Include="Areas\Booklet\Views\Scripts\Lib\fancytree\jquery.fancytree.min.js" />

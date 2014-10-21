@@ -21,9 +21,13 @@ ul.fancytree-container{
     font-family:'BYekan'
 }
 .fancytree-active span.fancytree-title {
-    background-color:#33acb9 !important;
+    background-color:#84b0e1 !important;
     color:#ffffff !important;
 }
 span.fancytree-title:hover {
-    background-color:#bfe4e8;
+    background-color:#e6eafb;
+}
+span.fancytree-icon {
+    margin-left:0px;
+    color:#84b0e1;
 }

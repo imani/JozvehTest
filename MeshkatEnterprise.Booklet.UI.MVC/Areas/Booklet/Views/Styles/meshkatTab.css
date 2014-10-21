@@ -52,13 +52,13 @@
 .tabSpan {
     line-height: 20px;
     font-size: small;
-    background-color: aliceblue;
+    background-color: #e6eafb;
     cursor: pointer;
     display: inline-block;
     zoom: 1;
     -webkit-user-select: none;
     -webkit-box-sizing: border-box;
-    color: #27afc7;
+    color: #929292;
 }
 
 .tabBox {
@@ -67,12 +67,11 @@
 }
 
 .tabSpan:hover {
-    background-color: #bde9fa;
-    color: #27afc7;
+    background-color: #d2d9f8;
 }
 
 .tabSelected {
-    background-color: #4ad0dd;
+    background-color: #84b0e1;
     color:#ffffff;
 }
 .tabClose {

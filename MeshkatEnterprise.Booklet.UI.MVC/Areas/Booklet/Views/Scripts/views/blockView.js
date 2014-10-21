@@ -44,7 +44,7 @@
         },
         getCurrentPageView: function (top, bottom) {
             for (var i = 0; i < this.pageViews.length; i++) {
-                if (this.pageViews[i].isCurrentPage(this.$el.position().top, top, bottom))
+                if (this.pageViews[i].isShowing(this.$el.position().top, top, bottom))
                     return this.pageViews[i];
             }
             return null;

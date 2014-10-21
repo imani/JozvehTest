@@ -27,7 +27,7 @@
                 tabbable: false,
                 autoActivate: false,
                 autoScroll: false,
-                keyboard:false,
+                keyboard: false,
                 init: function () {
                     $(this).find(".fancytree-container").attr("DIR", "RTL").addClass("fancytree-rtl");
                 },
@@ -48,7 +48,7 @@
                     var nodes = data.response.ReturnValue;
                     var processed = [];
                     for (var i = 0; i < nodes.length; i++) {
-                        processed.push({ title: nodes[i].Title, key: nodes[i].Key, lazy: nodes[i].HasChild, tooltip: nodes[i].Title, icon: nodes[i].ParentKey ? 'book-open.png' : 'book-close.png', TOC:new app.BookTableOfContent(nodes[i]) });
+                        processed.push({ title: nodes[i].Title, key: nodes[i].Key, lazy: nodes[i].HasChild, tooltip: nodes[i].Title, TOC:new app.BookTableOfContent(nodes[i]) });
                     }
                     data.result = processed;
                 },
@@ -59,8 +59,19 @@
                 //},
                 activate: function (event, data) {
                     app.bookletView.loadVolume(data.node.data.TOC);
+                },
+                renderNode: function (type, obj) {
+                    var icons = $(obj.node.li).find(".fancytree-icon");
+                    icons.css("background-image", "none");
+                    //icons.css("color", "#84b0e1");
+                    icons.addClass("fa fa-circle-o");
                 }
             });
+            
+            //var icons = $("#tableOfContentTree").find(".fancytree-icon");
+            //icons.css("background-image", "none");
+            //icons.addClass("fa fa-circle-o");
+
             $("#tableOfContentTree").find(".fancytree-container").removeAttr("tabindex");
             $.ajax({
                 type: "GET",
@@ -130,7 +141,6 @@
                     hideLoading();
                     var nodes = loadedNode.ReturnValue;
                     var obj = {};
-                    //debugger;
                     var rootNode = $("#tableOfContentTree").fancytree("getRootNode");
                     var treeToc = $("#tableOfContentTree").fancytree("getTree");
                     for (var i = nodes.length-1; i>=0 ; i--) {

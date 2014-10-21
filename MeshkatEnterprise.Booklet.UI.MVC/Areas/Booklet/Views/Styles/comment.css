@@ -75,14 +75,14 @@
     color:#02b105;
 }
 .commentBody-more:hover {
-    color:#35d9e2;
+    color:#f1f3fc;
 }
 .commentItem-selected {
-    background-color: #ddd;
+    background-color: #eceeff;
 }
 
 .commentItem-hover {
-    background-color: aliceblue;
+    background-color: #f9fafe;
 }
 
 .btnCommentHeader {
