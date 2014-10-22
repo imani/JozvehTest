@@ -17,17 +17,14 @@
 		}
 ul.fancytree-container{
     overflow-x:hidden;
+    background-color:#f3f3f3;
     border:none;
     font-family:'BYekan'
 }
 .fancytree-active span.fancytree-title {
-    background-color:#84b0e1 !important;
+    background-color:#33acb9 !important;
     color:#ffffff !important;
 }
 span.fancytree-title:hover {
-    background-color:#e6eafb;
-}
-span.fancytree-icon {
-    margin-left:0px;
-    color:#84b0e1;
+    background-color:#bfe4e8;
 }

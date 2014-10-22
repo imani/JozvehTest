@@ -62,6 +62,7 @@
                     function (data) {
                         if (!checkResponse(data)) return;
                         hideLoading();
+                        that.$el.hide(200);
                         //////////////////Update Block ////////////////////
                         var block = app.currentVolumeView.currentBlockView.model.toJSON();
                         block.Comments = _.without(block.Comments, _.findWhere(block.Comments, { Id: that.model.getId() }));
@@ -69,7 +70,6 @@
                         app.currentVolumeView.currentBlockView.render();
                         app.currentVolumeView.updatePage(true);
                         ///////////////////////////////////////////////////
-                        that.$el.hide(200);
                         showMessage(messageList.COMMENT_REMOVED, "حذف توضیح", "success");
                         
                     },

@@ -91,7 +91,14 @@
         txtSearchKeyDown: function (e) {
             if (e.which == 13) {
                 e.preventDefault();
-                $("#bookletPanel").meshkatTab("addTab", "نتایج جستجو", app.searchView, 111);
+                var tab = $("#bookletPanel").meshkatTab("getTabById", "111");
+                if (tab === null) {
+                    $("#bookletPanel").meshkatTab("addTab", "نتایج جستجو", app.searchView, "111");
+                } else {
+                    $("#bookletPanel").meshkatTab("selectTab", tab);
+                    $(tab).data().view=app.searchView;
+                }
+               
                 app.searchView.loadResult($("#txtSearch").val(), 0, 20);
             }
         },

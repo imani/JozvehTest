@@ -164,47 +164,46 @@
             <div id="bookletPanel" class="ui-layout-center">
             </div>
             <div id="commentPanel" class="ui-layout-west">
-                <div class="ui-layout-north commentTopBar">
-                    <div id="btnCommentMode" class="commentBarButton alignRight fa fa-comment" title="توضیح جدید"></div>
-                </div>
-                <div class="ui-layout-center">
-                    <div id="newCommentArea" class="ui-layout-north">
-                        <div class="ui-layout-north editcommentTopBar">
-                            ثبت توضیح
-                        </div>
-                        <div contenteditable="true" id="txtNewComment" class="comment"></div>
-                        <label>
-                            <select id="cboNewCommentType" class="commentTypeSelect">
+                <div id="newCommentArea" >
+                    <div class="ui-layout-north editcommentTopBar">
+                        ثبت توضیح
+                    </div>
+                    <div contenteditable="true" id="txtNewComment" class="ui-layout-center">
+                    </div>
+                    <div id="commentOptionsDiv" class="ui-layout-south">
+                        <label class="lblCommentType" title="نوع توضیح">
+                            <select id="cboNewCommentType">
                             </select>
                         </label>
-                        <div id="commentOptionsDiv">
-                            <button id="btnSaveComment" class="btn">تایید</button>
-                            <button id="btnCancelSaveComment" class="btn cancelBtn">انصراف</button>
-                        </div>
+                        <button id="btnSaveComment" class="btn">تایید</button>
+                        <button id="btnCancelSaveComment" class="btn cancelBtn">انصراف</button>
                     </div>
-                    <div id="currentCommentsPanel">
-                    </div>
-                    <div id="editCommentArea">
+                </div>
+
+                <div id="editCommentArea" >
                         <div class="ui-layout-north editcommentTopBar">
                             ویرایش توضیح
                         </div>
-
-                        <div id="editableContent" class="ui-layout-center">
-                            <div id="txtCommentEdit" contenteditable="true" class="txtEditComment"></div>
+                        <div id="txtCommentEdit" contenteditable="true" class="txtEditComment ui-layout-center">
                         </div>
-                        <div class="ui-layout-toggler-south">
-                            <label>
-                                <select id="cboEditCommentType" class="commentTypeSelect">
+                        <div id="editCommentOptions" class="ui-layout-south">
+                            <label class="lblCommentType" title="نوع توضیح">
+                                <select id="cboEditCommentType">
                                 </select>
                             </label>
-                        </div>
-                        <div class=" editButtons ui-layout-toggler-south">
+
                             <button id="btnEditComment" class="btn">ویرایش</button>
                             <button id="btnCancelEditComment" class="btn cancelBtn">انصراف</button>
                         </div>
 
                     </div>
+
+                <div class="ui-layout-north commentTopBar">
+                    <div id="btnCommentMode" class="commentBarButton alignRight fa fa-comment" title="توضیح جدید"></div>
                 </div>
+                <div id="currentCommentsPanel" class="ui-layout-center">
+                    </div>
+              
             </div>
             <div id="tableOfContentPanel" class="ui-layout-east">
                 <div class="ui-layout-north">
@@ -217,7 +216,7 @@
         </div>
     </div>
     <div id="pnlTimeout" title="Basic dialog">
-        <div style="margin-bottom:10px; ">شما باید مجدداً وارد شوید.</div>
+        <div style="margin-bottom: 10px;">شما باید مجدداً وارد شوید.</div>
         <span class="btn-default">تایید</span>
     </div>
 </body>

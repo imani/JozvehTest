@@ -77,7 +77,7 @@ namespace MeshkatEnterprise.Booklet.Search
             if (start == 0 && query.Contains("xor"))
             {
                 Match xorMath = Regex.Match(query, "([^\\s]*) xor ([^\\s]*)");
-                string[] separators = {" xor "};
+                string[] separators = { " xor " };
                 string[] strs = xorMath.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
                 querytext = query.Replace(xorMath.Value, string.Format("(+({0} {1})-(+{0}+{1}))", strs[0], strs[1]));
@@ -86,7 +86,6 @@ namespace MeshkatEnterprise.Booklet.Search
             {
                 querytext = query;
             }
-
             Query textQuery = TextParser.Parse(querytext);
             Query exactTextQuery = ExactTextParser.Parse(querytext);
             var booleanquery = new BooleanQuery();

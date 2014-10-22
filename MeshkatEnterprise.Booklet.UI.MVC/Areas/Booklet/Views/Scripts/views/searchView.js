@@ -47,7 +47,7 @@
                     var divHeight = $(this.el).height();
                     if (!this.scrollFlag)
                         this.scrollFlag = true;
-                    if ((divHeight - currentScroll) < this.scrollOffset) {
+                    if ((divHeight - currentScroll) < this.scrollOffset+200) {
                         var start = this.loadCount * this.resultsCount;
                         var end = start + this.resultsCount;
                         this.loadMoreResults(this.searchQuery, start, end);

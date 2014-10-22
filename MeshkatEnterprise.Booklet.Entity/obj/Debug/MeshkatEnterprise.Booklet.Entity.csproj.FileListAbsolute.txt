@@ -3,3 +3,7 @@ C:\Users\pc 8\Source\Workspaces\MeshkatEnterprise-Booklet\MeshkatEnterprise.Book
 C:\Users\pc 8\Source\Workspaces\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.dll
 C:\Users\pc 8\Source\Workspaces\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.pdb
 C:\Users\pc 8\Source\Workspaces\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.csprojResolveAssemblyReference.cache
+E:\Meshkat_booklet\MeshkatEnterprise.Booklet.Entity\bin\Debug\MeshkatEnterprise.Booklet.Entity.dll
+E:\Meshkat_booklet\MeshkatEnterprise.Booklet.Entity\bin\Debug\MeshkatEnterprise.Booklet.Entity.pdb
+E:\Meshkat_booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.dll
+E:\Meshkat_booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.pdb

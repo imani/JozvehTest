@@ -149,11 +149,10 @@ input:focus{
     height:19px;
     margin: 3px 2%;
 }
+
 .commentTopBar {
     background-color:#CCCCCC;
-    height:10px;
     /*border-bottom: 2px solid #008b8b;*/
-   box-sizing: border-box;
 
 }
 .commentsContainer {

@@ -1,28 +1,25 @@
 ﻿#txtNewComment {
-     max-height: 500px;
-        min-height: 100px;
-    width: 100%;
-    background-color: #EBEBEB;
-    resize: vertical;
+    width: 97%;
         border:1px ridge #b2b1b1;
-    display: block;
-    box-sizing: border-box;
-    margin-bottom: 1px;
-    overflow-x: hidden;
-    font-family: 'BYekan';
-    margin-top: 2px;
-    max-height: 300px;
+        display: block;
+        margin-bottom: 1px;
+        overflow-x: hidden;
+        font-family: 'BYekan';
+        margin-top: 2px;
+        height:90%
 }
 .commentOptionsDiv {
-    box-sizing: border-box;
     padding: 5px;
     margin-top: -1px;
     margin-bottom: 2px;
+    height: 10%;
 }
 #newCommentArea {
-    margin-bottom: 35px;
-    width: 98%;
-    display:none;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    z-index: 3;
 }
 #btnSaveComment,#btnCancelComment {
     height: 20px;
@@ -38,6 +35,8 @@
     padding:2px;
     vertical-align: middle;
     line-height: 0px;
+    float: left;
+    margin: 2px;
 }
 
 .btn:hover {
@@ -108,16 +107,18 @@
     }
     #editCommentArea {
         display: none;
-        width: 98%;
+        width: 100%;
         height: 100%;
-
+        position: absolute;
+        Z-INDEX: 2;
+        background-color: white;
+        padding-top: 30px;
     }
     .txtEditComment {
 
-        width: 100%;
+        width: 97%;
         border:1px ridge #b2b1b1;
         display: block;
-        box-sizing: border-box;
         margin-bottom: 1px;
         overflow-x: hidden;
         font-family: 'BYekan';
@@ -147,18 +148,25 @@
 }
 #commentOptionsDiv {
     float: left;
+    margin-left: auto;
+    margin-right: auto;
 }
 #editableContent {
         height: 94%;
         width: 100%;
         border:1px ridge #b2b1b1;
         display: block;
-        box-sizing: border-box;
         margin-bottom: 1px;
         overflow-x: hidden;
         font-family: 'BYekan';
         margin-top: 2px;
     
+}
+#editCommentOptions {
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .editButtons {
@@ -172,29 +180,29 @@
 	
 select {
     float: right;
-    padding-right: 35px;
-     font-family: 'BYekan';
+    padding-right: 25px;
     margin: 0;
     background: #f8f8f8;
     color:#888;
     border:none;
-    outline:none;
     display: inline-block;
     -webkit-appearance:none;
     -moz-appearance:none;
-    appearance:none;
     cursor:pointer;
+   
 }
 
 
-label {
+.lblCommentType {
     position: relative;
         float: right;
-    width: 50px;
+        margin-top: 2px;
+
 }
-label:after {
+.lblCommentType:after {
+    
     content:'<>';
-    font:10px "Consolas", monospace;
+    font:8px "Consolas", monospace;
     color:#aaa;
     -webkit-transform:rotate(90deg);
     -moz-transform:rotate(90deg);
@@ -206,15 +214,7 @@ label:after {
     position:absolute;
     pointer-events:none;
 }
-label:before {
-    content:'';
-    right:6px; top:0px;
-    width:20px; height:20px;
-    background:#f8f8f8;
-    position:absolute;
-    pointer-events:none;
-    display:block;
-}
+
 .error {
     border-style: solid;
     border-color: red;
