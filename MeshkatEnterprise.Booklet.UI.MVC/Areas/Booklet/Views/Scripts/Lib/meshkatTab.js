@@ -247,5 +247,8 @@
             $(this.element).layout().close("north");
             $(this.tabContent).html("");
         }
+    },
+    getTabCount: function () {
+        return $(this.tabContainer).find('.tabSpan').length;
     }
 });

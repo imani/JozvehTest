@@ -1,87 +1,66 @@
-﻿#txtNewComment {
-    width: 97%;
-        border:1px ridge #b2b1b1;
-        display: block;
-        margin-bottom: 1px;
-        overflow-x: hidden;
-        font-family: 'BYekan';
-        margin-top: 2px;
-        height:90%
-}
-.commentOptionsDiv {
+﻿.commentOptionsDiv {
     padding: 5px;
     margin-top: -1px;
     margin-bottom: 2px;
     height: 10%;
 }
+
 #newCommentArea {
-    width: 100%;
-    height: 100%;
+    position:absolute;
+    top:36px;
+    left:0;
+    bottom:0;
+    right:0;
+    padding:10px;
     display: none;
-    position: absolute;
-    z-index: 3;
+    background-color:#ffffff;
 }
-#btnSaveComment,#btnCancelComment {
-    height: 20px;
-    width: 65px;
-    font-size: 12px;
-    font-family: 'BYekan';
+#editCommentArea {
+    position:absolute;
+    top:36px;
+    left:0;
+    bottom:0;
+    right:0;
+    padding:10px;
+    display: none;
+    background-color:#ffffff;
 }
-.btn {
-    height: 20px;
-    width: 65px;
-    font-size: 12px;
-    font-family: 'BYekan';
-    padding:2px;
-    vertical-align: middle;
-    line-height: 0px;
-    float: left;
-    margin: 2px;
-}
-
-.btn:hover {
-    color: white;
-    background-color: #348a8f;
-}
-
-.cancelBtn:hover {
-    color: white;
-    background-color: #800000;
-}
-
-
 .commentItem {
     margin: 2px;
     margin-top: 5px;
     min-height: 70px;
     overflow-x: hidden;
     overflow-y: auto;
-    border: solid 1px #ddd;
     cursor: pointer;
     font-size: small;
-    background-color: #ffffff;
+    background-color: #FAFCFC;
 }
-.commentItem .commenterName {
-    color: #02969b;
-    font-size:x-small;
-}
+
+    .commentItem .commenterName {
+        color: #02969b;
+        font-size: x-small;
+    }
+
 .commentHeder {
     padding-right: 2px;
     padding-left: 2px;
     color: #ffffff;
 }
+
 .commentBody-more {
-    color:#02b105;
+    color: #02b105;
 }
-.commentBody-more:hover {
-    color:#f1f3fc;
-}
+
+    .commentBody-more:hover {
+        color: #1497ae;
+    }
+
 .commentItem-selected {
     background-color: #eceeff;
 }
 
 .commentItem-hover {
-    background-color: #f9fafe;
+    background-color: #f3f5fc;
 }
 
 .btnCommentHeader {
@@ -94,45 +73,41 @@
     .btnCommentHeader:hover {
         color: #02969b;
     }
+
 .commentBody {
     padding: 2px;
     text-align: justify;
     text-justify: inter-word;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
+
 .commentTypeColor {
     color: #02969b;
     margin-top: 5px;
-    font-size:10px;
-    }
-    #editCommentArea {
-        display: none;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        Z-INDEX: 2;
-        background-color: white;
-        padding-top: 30px;
-    }
-    .txtEditComment {
+    font-size: 10px;
+}
 
-        width: 97%;
-        border:1px ridge #b2b1b1;
-        display: block;
-        margin-bottom: 1px;
-        overflow-x: hidden;
-        font-family: 'BYekan';
-        margin-top: 2px;
-        height: 90%;
-    }
-    .editcommentTopBar {
-      color: white;
-      text-align: center;
-      padding: 2px;
-      font-size: 12px;
-      background-color: #228BC2;
-    
-    }
+
+
+.txtEditComment {
+    width: 97%;
+    border: 1px ridge #b2b1b1;
+    display: block;
+    margin-bottom: 1px;
+    overflow-x: hidden;
+    font-family: 'BYekan';
+    margin-top: 2px;
+    height: 90%;
+}
+
+.editcommentTopBar {
+    color: white;
+    text-align: center;
+    padding: 2px;
+    font-size: 12px;
+    background-color: #84b0e1;
+}
+
 .commentOptionToolTip {
     background-color: #b2b1b1;
     color: #808080;
@@ -146,77 +121,102 @@
 #currentCommentsPanel {
     padding-left: 7px;
 }
-#commentOptionsDiv {
-    float: left;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 #editableContent {
-        height: 94%;
-        width: 100%;
-        border:1px ridge #b2b1b1;
-        display: block;
-        margin-bottom: 1px;
-        overflow-x: hidden;
-        font-family: 'BYekan';
-        margin-top: 2px;
-    
+    height: 94%;
+    width: 100%;
+    border: 1px ridge #b2b1b1;
+    display: block;
+    margin-bottom: 1px;
+    overflow-x: hidden;
+    font-family: 'BYekan';
+    margin-top: 2px;
 }
+
 #editCommentOptions {
     height: 10%;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .editButtons {
     float: left;
 }
+
 .commentType {
     display: none;
-    color:darkmagenta;
+    color: darkmagenta;
     font-size: x-small;
 }
-	
+
 select {
     float: right;
     padding-right: 25px;
     margin: 0;
     background: #f8f8f8;
-    color:#888;
-    border:none;
+    color: #888;
+    border: none;
     display: inline-block;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    cursor:pointer;
-   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
 }
 
 
-.lblCommentType {
+/*.lblCommentType {
     position: relative;
-        float: right;
-        margin-top: 2px;
+    float: right;
+    margin-top: 2px;
+}
 
-}
-.lblCommentType:after {
-    
-    content:'<>';
-    font:8px "Consolas", monospace;
-    color:#aaa;
-    -webkit-transform:rotate(90deg);
-    -moz-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
-    transform:rotate(90deg);
-    right:8px; top:2px;
-    padding:0 0 2px;
-    border-bottom:1px solid #ddd;
-    position:absolute;
-    pointer-events:none;
-}
+    .lblCommentType:after {
+        content: '<>';
+        font: 8px "Consolas", monospace;
+        color: #aaa;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        right: 8px;
+        top: 2px;
+        padding: 0 0 2px;
+        border-bottom: 1px solid #ddd;
+        position: absolute;
+        pointer-events: none;
+    }*/
 
 .error {
     border-style: solid;
     border-color: red;
-   
+}
+.commentBarButton {
+    color:#9d9d9d;
+    margin:3px;
+    font-size:11px;
+    cursor:pointer;
+    padding:5px;
+}
+.commentBarButton:hover {
+    background-color:#9cbce0;
+    color:#ffffff;
+}
+.commentBarButton-selected {
+    color:#ffffff;
+    background-color:#84b0e1;
+}
+.tblComment {
+    width: 100%; height: 100%;border-spacing:0px 0px;
+}
+.commentBodyCell {
+    padding:0px;padding-bottom:5px;
+}
+.txtComment {
+    width: 100%;
+    height: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: solid 1px #d2e1f1;
+    font-size:small;
+    color:#2d4596;
 }

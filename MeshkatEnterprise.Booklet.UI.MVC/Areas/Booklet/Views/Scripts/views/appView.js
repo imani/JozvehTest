@@ -46,8 +46,8 @@ var app = app || {};
                 },
                 west: {
                     size: "20%",
-                    spacing_closed: 3,
-                    spacing_open: 3,
+                    spacing_closed: 0,
+                    spacing_open: 0,
                     initClosed: true
                 }
             });

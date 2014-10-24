@@ -16,31 +16,6 @@
         selectedComment: null,
         initialize: function () {
             this.tplCommentItem = $("#tplCommentItem");
-            this.$el.layout({
-                defaults: {
-                    spacing_closed: 0,
-                    spacing_open: 0
-                },
-                north: {
-                    size: '30'
-                },
-                south: {
-                    size: '30'
-                }
-            });
-            $("#newCommentArea").layout({
-
-                defaults: {
-                    spacing_closed: 0,
-                    spacing_open: 0
-                },
-                north: {
-                    size: '30'
-                },
-                south: {
-                    size: '30'
-                }
-            });
             $(".lblCommentType").tooltip({
                 position: { my: "middle bottom", at: "middle top" },
                 show: { effect: "slide", duration: 100, direction: "down" },
@@ -73,20 +48,25 @@
             $("#mainContent").layout().close("west");
         },
         changeCommentMode: function () {
+            
             app.bookletView.commentMode = !app.bookletView.commentMode;
             $("#txtNewComment").text("");
             if (app.bookletView.commentMode) {
                 if (app.bookletView.highlightMode) {
                     $("#btnHighlight").click();
                 }
-                $("#currentCommentsPanel").hide();
-                $("#newCommentArea").show(200);
-                $("#currentCommentsPanel").animate({ scrollTop: 1000 }, 800, 'swing');
+                if (!app.bookletView.tabExists()) {
+                    showMessage("هیچ کتابی باز نیست.", "", "error");
+                    return;
+                }
+                $("#editCommentArea").hide();
+                $("#newCommentArea").finish();
+                $("#newCommentArea").slideDown(200);
                 $("#txtNewComment").val("");
             }
             else {
-                $("#newCommentArea").hide(200);
-                $("#currentCommentsPanel").show();
+                $("#newCommentArea").finish();
+                $("#newCommentArea").slideUp(200);
             }
             app.bookletView.clearCommentHighlights();
             this.render();
@@ -94,7 +74,6 @@
         saveNewComment: function () {
             var that = this;
             var commentedSections = app.currentVolumeView.getCommentedSections();
-            debugger;
             if ($("#txtNewComment").text().trim().length == 0) {
                 showMessage("متن توضیح نمیتواند خالی باشد", "", "error");
             }
@@ -165,7 +144,6 @@
                     function (data) {
                         if (!checkResponse(data)) return;
                         var commentTypeList = data.ReturnValue;
-                        debugger;
                         for (var i = 0; i < commentTypeList.length; i++) {
                             var option = $('<option>', {
                                 value: commentTypeList[i].BookCommentTypeId,

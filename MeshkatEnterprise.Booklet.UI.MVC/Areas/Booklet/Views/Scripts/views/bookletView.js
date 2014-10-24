@@ -91,6 +91,9 @@
         keyPressed: function (code) {
             if(app.currentVolumeView!==undefined)
                 app.currentVolumeView.keyPressed(code);
+        },
+        tabExists: function () {
+            return $("#bookletPanel").meshkatTab("getTabCount")!==0;
         }
     });
 })(jQuery);

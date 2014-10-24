@@ -38,16 +38,17 @@
 
         },
         showOptions: function (e) {
-            this.$el.find(".iconRemoveComment,.iconEditComment").show(100);
-            this.$el.find(".commentType").fadeIn();
+            var buttons = this.$el.find(".iconRemoveComment,.iconEditComment,.commentType");
+            buttons.finish();
+            buttons.show(100);
             if (!this.$el.find(".commentItem").hasClass("commentItem-selected")) {
                 this.$el.find(".commentItem").addClass("commentItem-hover");
             }
         },
         hideOptions: function () {
-
-            this.$el.find(".iconRemoveComment,.iconEditComment").hide(100);
-            this.$el.find(".commentType").fadeOut();
+            var buttons = this.$el.find(".iconRemoveComment,.iconEditComment,.commentType");
+            buttons.finish();
+            buttons.hide(100);
             this.$el.find(".commentItem").removeClass("commentItem-hover");
         },
         removeComment: function (e) {

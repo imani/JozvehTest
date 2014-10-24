@@ -163,47 +163,68 @@
             <div id="leftBar"></div>
             <div id="bookletPanel" class="ui-layout-center">
             </div>
-            <div id="commentPanel" class="ui-layout-west">
-                <div id="newCommentArea" >
-                    <div class="ui-layout-north editcommentTopBar">
-                        ثبت توضیح
-                    </div>
-                    <div contenteditable="true" id="txtNewComment" class="ui-layout-center">
-                    </div>
-                    <div id="commentOptionsDiv" class="ui-layout-south">
-                        <label class="lblCommentType" title="نوع توضیح">
-                            <select id="cboNewCommentType">
-                            </select>
-                        </label>
-                        <button id="btnSaveComment" class="btn">تایید</button>
-                        <button id="btnCancelSaveComment" class="btn cancelBtn">انصراف</button>
-                    </div>
-                </div>
+            <div id="commentPanel" class="ui-layout-west" style="overflow:hidden;">
+                <table style="width: 100%; height: 100%;border-spacing:0px 0px;">
+                    <tr>
+                        <td style="padding:0px;">
+                            <div style="width: 100%; height: 35px; border-bottom: solid 1px #ddd;">
+                                <div id="btnCommentMode" class="alignRight commentBarButton">
+                                    <span class="fa fa-comment"></span>
+                                    <span style="margin-right: 3px;">توضیح جدید</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="height: 100%;">
+                        <td style="padding:0px;">
+                            <div id="currentCommentsPanel" style="height: 100%; overflow-x: hidden; overflow-y: auto;">
+                            </div>
+                            <div id="newCommentArea">
+                                <table class="tblComment">
+                                    <tr style="height:100%;">
+                                        <td class="commentBodyCell">
+                                            <div contenteditable="true" id="txtNewComment" class="txtComment">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 25px;">
+                                        <td>
+                                            <div class="select-style" style="float: right; margin-right: 5px;">
+                                                <span class="fa fa-sort-desc"></span>
+                                                <select id="cboNewCommentType">
+                                                </select>
+                                            </div>
+                                            <button id="btnCancelSaveComment" class="btn-default" style="float: left;">انصراف</button>
+                                            <button id="btnSaveComment" class="btn-default" style="float: left; margin-left: 5px;">تایید</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="editCommentArea">
+                                <table class="tblComment">
+                                    <tr style="height:100%;">
+                                        <td class="commentBodyCell">
+                                            <div contenteditable="true" id="txtCommentEdit" class="txtComment">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 25px;">
+                                        <td>
+                                            <div class="select-style" style="float: right; margin-right: 5px;">
+                                                <span class="fa fa-sort-desc"></span>
+                                                <select id="cboEditCommentType">
+                                                </select>
+                                            </div>
 
-                <div id="editCommentArea" >
-                        <div class="ui-layout-north editcommentTopBar">
-                            ویرایش توضیح
-                        </div>
-                        <div id="txtCommentEdit" contenteditable="true" class="txtEditComment ui-layout-center">
-                        </div>
-                        <div id="editCommentOptions" class="ui-layout-south">
-                            <label class="lblCommentType" title="نوع توضیح">
-                                <select id="cboEditCommentType">
-                                </select>
-                            </label>
-
-                            <button id="btnEditComment" class="btn">ویرایش</button>
-                            <button id="btnCancelEditComment" class="btn cancelBtn">انصراف</button>
-                        </div>
-
-                    </div>
-
-                <div class="ui-layout-north commentTopBar">
-                    <div id="btnCommentMode" class="commentBarButton alignRight fa fa-comment" title="توضیح جدید"></div>
-                </div>
-                <div id="currentCommentsPanel" class="ui-layout-center">
-                    </div>
-              
+                                            <button id="btnCancelEditComment" class="btn-default" style="float: left;">انصراف</button>
+                                            <button id="btnEditComment" class="btn-default" style="float: left; margin-left: 5px;">تایید</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div id="tableOfContentPanel" class="ui-layout-east">
                 <div class="ui-layout-north">

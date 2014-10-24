@@ -23,16 +23,18 @@
         render: function () {
         },
         loadComment: function (commentModel) {
+            if (app.bookletView.commentMode)
+                $("#btnCommentMode").click();
             this.model = commentModel;
             $("#txtCommentEdit").text(this.model.getText());
             $("#cboEditCommentType").val(this.model.getType().getBookCommentTypeId());
-            $("#currentCommentsPanel").hide();
-            $("#editCommentArea").show(300);
+            $("#editCommentArea").finish();
+            $("#editCommentArea").slideDown(200);
             $("#txtCommentEdit").focus();
         },
         hideEditPanel: function () {
-            $("#editCommentArea").hide(300);
-            $("#currentCommentsPanel").show(300);
+            $("#editCommentArea")
+            $("#editCommentArea").slideUp(200);
         },
         editComment: function () {
             this.model.setText($("#txtCommentEdit").text());
