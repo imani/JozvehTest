@@ -129,7 +129,9 @@
         close: function () {
             $("#mainContent").layout().close("east");
         },
-        selectNode: function(nodeKey) {
+        selectNode: function (nodeKey) {
+            app.targetNodeId = nodeKey;
+
             $.ajax({
                 type: "GET",
                 url: ajaxPath.SUBTREE_GET,
@@ -143,8 +145,8 @@
                     var obj = {};
                     var rootNode = $("#tableOfContentTree").fancytree("getRootNode");
                     var treeToc = $("#tableOfContentTree").fancytree("getTree");
-                    for (var i = nodes.length-1; i>=0 ; i--) {
-                        obj = { title: nodes[i].Title, ParentKey: nodes[i].ParentKey, key: nodes[i].Key, lazy: nodes[i].HasChild, tooltip: nodes[i].Title, icon: nodes[i].ParentKey ? 'book-open.png' : 'book-close.png', TOC: new app.BookTableOfContent(nodes[i]) };
+                    for (var i = 0; i < nodes.length ; i++) {
+                        obj = { title: nodes[i].Title, ParentKey: nodes[i].ParentKey, key: nodes[i].Key, lazy: nodes[i].HasChild, tooltip: nodes[i].Title, TOC: new app.BookTableOfContent(nodes[i]) };
                         if (obj.ParentKey != null && treeToc.getNodeByKey(obj.key.toString())==null)
                             treeToc.getNodeByKey(obj.ParentKey.toString()).addChildren(obj);
                         else {
@@ -152,7 +154,7 @@
                             treeToc.getNodeByKey(obj.key.toString()).removeChildren();
                         }
                     }
-                    treeToc.getNodeByKey(obj.key.toString()).setActive();
+                    treeToc.getNodeByKey(app.targetNodeId).setActive();
                 },
                 error: function (data) {
                     hideLoading();

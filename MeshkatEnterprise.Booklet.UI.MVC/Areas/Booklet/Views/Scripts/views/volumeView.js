@@ -61,8 +61,17 @@
             var that = this;
             this.currentBlockView = new app.BlockView({ model: block });
             $(this.content).html(this.currentBlockView.render().el);
+
+            // if the paragraph is hidden=> skip it and go to next paragraph
+            var paragraphView=this.currentBlockView.getParagraphView(this.paragraphId);
+            if (paragraphView.$el.css("display") === "none") {
+                this.paragraphId++;
+                paragraphView = this.currentBlockView.getParagraphView(this.paragraphId);
+            }
+            ///////////////////////////////////
+
             var a = this.content.offset().top;
-            var b = this.currentBlockView.getParagraphView(this.paragraphId).$el.offset().top;
+            var b = paragraphView.$el.offset().top;
             this.currentBlockView.$el.css("top", (a - b) + "px");
             this.currentBlockView.on("paragraphClicked", function (view) {
                 that.paragraphClicked(view);
