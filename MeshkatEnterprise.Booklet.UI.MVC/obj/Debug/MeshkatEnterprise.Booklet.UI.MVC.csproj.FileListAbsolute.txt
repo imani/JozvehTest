@@ -266,3 +266,14 @@ F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Bookle
 F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\obj\Debug\MeshkatEnterprise.Booklet.UI.MVC.csprojResolveAssemblyReference.cache
 F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\obj\Debug\MeshkatEnterprise.Booklet.UI.MVC.dll
 F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\obj\Debug\MeshkatEnterprise.Booklet.UI.MVC.pdb
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\Compositional.Composer.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\Compositional.Composer.Implementation.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Infrastructure.General.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Infrastructure.Web.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Security.API.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Security.API.Impl.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Security.Entity.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Security.Persistence.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Security.Persistence.Sql.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Security.Service.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.UI.MVC\bin\MeshkatEnterprise.Security.Service.Impl.dll
