@@ -119,12 +119,14 @@
 }
 
 #currentCommentsPanel {
-    padding-left: 7px;
+    padding-left: 3px;
     overflow-x: hidden;
     overflow-y: auto;
     position:absolute;
     top:37px;
     bottom:5px;
+    right:0px;
+    left:0px;
 }
 
 #editableContent {
