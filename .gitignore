@@ -27,3 +27,5 @@ _UpgradeReport_Files/UpgradeReport.xslt
 _UpgradeReport_Files/UpgradeReport.css
 UpgradeLog.htm
 UpgradeLog.XML
+*.webtestresult
+*.manifest
