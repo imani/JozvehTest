@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Entity", "MeshkatEnterprise.Booklet.Entity\MeshkatEnterprise.Booklet.Entity.csproj", "{2C255C2D-8115-445C-93A4-7E97B08ED162}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Persistence", "MeshkatEnterprise.Booklet.Persistence\MeshkatEnterprise.Booklet.Persistence.csproj", "{D864BF36-0DED-4E2E-94FD-AB1B8EAD4378}"
@@ -23,43 +21,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.Search", "MeshkatEnterprise.Booklet.Search\MeshkatEnterprise.Booklet.Search.csproj", "{8C347F66-B701-4151-B975-F238C68F1D77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshkatEnterprise.Booklet.LoadTest", "MeshkatEnterprise.Booklet.LoadTest\MeshkatEnterprise.Booklet.LoadTest.csproj", "{1191A514-8CC4-46A2-B0C4-B1D92EB7FD30}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 11
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://46.32.31.119:8080/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = MeshkatEnterprise.Booklet.Entity\\MeshkatEnterprise.Booklet.Entity.csproj
-		SccProjectName1 = MeshkatEnterprise.Booklet.Entity
-		SccLocalPath1 = MeshkatEnterprise.Booklet.Entity
-		SccProjectUniqueName2 = MeshkatEnterprise.Booklet.Persistence.Sql\\MeshkatEnterprise.Booklet.Persistence.Sql.csproj
-		SccProjectName2 = MeshkatEnterprise.Booklet.Persistence.Sql
-		SccLocalPath2 = MeshkatEnterprise.Booklet.Persistence.Sql
-		SccProjectUniqueName3 = MeshkatEnterprise.Booklet.Persistence\\MeshkatEnterprise.Booklet.Persistence.csproj
-		SccProjectName3 = MeshkatEnterprise.Booklet.Persistence
-		SccLocalPath3 = MeshkatEnterprise.Booklet.Persistence
-		SccProjectUniqueName4 = MeshkatEnterprise.Booklet.Security\\MeshkatEnterprise.Booklet.Security.csproj
-		SccProjectName4 = MeshkatEnterprise.Booklet.Security
-		SccLocalPath4 = MeshkatEnterprise.Booklet.Security
-		SccProjectUniqueName5 = MeshkatEnterprise.Booklet.Service.Impl\\MeshkatEnterprise.Booklet.Service.Impl.csproj
-		SccProjectName5 = MeshkatEnterprise.Booklet.Service.Impl
-		SccLocalPath5 = MeshkatEnterprise.Booklet.Service.Impl
-		SccProjectUniqueName6 = MeshkatEnterprise.Booklet.Service\\MeshkatEnterprise.Booklet.Service.csproj
-		SccProjectName6 = MeshkatEnterprise.Booklet.Service
-		SccLocalPath6 = MeshkatEnterprise.Booklet.Service
-		SccProjectUniqueName7 = MeshkatEnterprise.Booklet.Service.UnitTest\\MeshkatEnterprise.Booklet.Service.UnitTest.csproj
-		SccProjectName7 = MeshkatEnterprise.Booklet.Service.UnitTest
-		SccLocalPath7 = MeshkatEnterprise.Booklet.Service.UnitTest
-		SccProjectUniqueName8 = MeshkatEnterprise.Booklet.UI.MVC\\MeshkatEnterprise.Booklet.UI.MVC.csproj
-		SccProjectName8 = MeshkatEnterprise.Booklet.UI.MVC
-		SccLocalPath8 = MeshkatEnterprise.Booklet.UI.MVC
-		SccProjectUniqueName9 = MeshkatEnterprise.Booklet.Index\\MeshkatEnterprise.Booklet.Index.csproj
-		SccProjectName9 = MeshkatEnterprise.Booklet.Index
-		SccLocalPath9 = MeshkatEnterprise.Booklet.Index
-		SccProjectUniqueName10 = MeshkatEnterprise.Booklet.Search\\MeshkatEnterprise.Booklet.Search.csproj
-		SccProjectName10 = MeshkatEnterprise.Booklet.Search
-		SccLocalPath10 = MeshkatEnterprise.Booklet.Search
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -105,6 +69,10 @@ Global
 		{8C347F66-B701-4151-B975-F238C68F1D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C347F66-B701-4151-B975-F238C68F1D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C347F66-B701-4151-B975-F238C68F1D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1191A514-8CC4-46A2-B0C4-B1D92EB7FD30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1191A514-8CC4-46A2-B0C4-B1D92EB7FD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1191A514-8CC4-46A2-B0C4-B1D92EB7FD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1191A514-8CC4-46A2-B0C4-B1D92EB7FD30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,3 +6,11 @@ C:\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet
 C:\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.LoadTest\obj\Debug\MeshkatEnterprise.Booklet.LoadTest.pdb
 C:\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.LoadTest\bin\Debug\BookletLoadParagraphs.webtest
 C:\MeshkatEnterprise-Booklet\MeshkatEnterprise.Booklet\MeshkatEnterprise.Booklet.LoadTest\bin\Debug\LoadTest1.loadtest
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.LoadTest\bin\Debug\WebTest1.webtest
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.LoadTest\bin\Debug\BookletLoadParagraphs.webtest
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.LoadTest\bin\Debug\LoadTest1.loadtest
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.LoadTest\bin\Debug\MeshkatEnterprise.Booklet.LoadTest.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.LoadTest\bin\Debug\MeshkatEnterprise.Booklet.LoadTest.pdb
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.LoadTest\obj\Debug\MeshkatEnterprise.Booklet.LoadTest.csprojResolveAssemblyReference.cache
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.LoadTest\obj\Debug\MeshkatEnterprise.Booklet.LoadTest.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.LoadTest\obj\Debug\MeshkatEnterprise.Booklet.LoadTest.pdb

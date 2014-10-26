@@ -7,3 +7,7 @@ E:\Meshkat_booklet\MeshkatEnterprise.Booklet.Entity\bin\Debug\MeshkatEnterprise.
 E:\Meshkat_booklet\MeshkatEnterprise.Booklet.Entity\bin\Debug\MeshkatEnterprise.Booklet.Entity.pdb
 E:\Meshkat_booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.dll
 E:\Meshkat_booklet\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.pdb
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.Entity\bin\Debug\MeshkatEnterprise.Booklet.Entity.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.Entity\bin\Debug\MeshkatEnterprise.Booklet.Entity.pdb
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.dll
+F:\Booklet_Revised\MeshkatEnterprise.Booklet.Entity\obj\Debug\MeshkatEnterprise.Booklet.Entity.pdb
