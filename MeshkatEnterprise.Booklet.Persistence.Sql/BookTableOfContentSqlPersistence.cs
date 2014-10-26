@@ -143,10 +143,10 @@ namespace MeshkatEnterprise.Booklet.Persistence.Sql
                     while (reader.HasRows && reader.Read())
                     {
                         var currentNode = new BookTableOfContent();
-                        currentNode.Key = Convert.ToInt64(reader["ID"]);
-                        if (reader["ParentID"]!=DBNull.Value)
-                        currentNode.ParentKey = Convert.ToInt64(reader["ParentID"]);
-                        currentNode.Title = (String) reader["Name"];
+                        currentNode.Key = Convert.ToInt64(reader["TableOfContentId"]);
+                        if (reader["TableOfContentParentId"] != DBNull.Value)
+                            currentNode.ParentKey = Convert.ToInt64(reader["TableOfContentParentId"]);
+                        currentNode.Title = (String)reader["TableOfContentTitle"];
                         currentNode.BookParagraphId = Convert.ToInt64(reader["ParagraphId"]);
                         currentNode.Path = (String) reader["Path"];
                         currentNode.VolumeId = Convert.ToInt64(reader["VolumeId"]);
