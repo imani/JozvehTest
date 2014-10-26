@@ -117,6 +117,7 @@
                 url: ajaxPath.BLOCK_GET + "?startParagraphId=" + this.firstCachedId + "&endParagraphId=" + this.lastCachedId+"&volumeId="+this.model.getVolumeId(),
                 dataType: "json",
                 success: function (data) {
+                    app.loadParagraphId = undefined;
                     that.$el.find(".imgLazyLoading").hide();
                     that.waitingForResponse = false;
                     if (!checkResponse(data)) return false;

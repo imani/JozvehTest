@@ -26,6 +26,7 @@
             var tocKeys = this.model.getTableOfContentNode().getPath().split('/');
             var nodeKey = tocKeys[tocKeys.length-1];
             app.tableOfContentView.selectNode(nodeKey);
+            app.loadParagraphId = this.model.getParagraphId();
         }
     });
 })(jQuery);

@@ -13,9 +13,9 @@
             end: null,
             loadCount: null,
             resultsCount: 20,
-            scrollFlag: false,
             scrollOffset: 5000,
             resultNumber: 1,
+            allowLoadMore: true,
             endOfSearch:false,
             initialize: function () {
                 $("#searchBox").hide();
@@ -24,7 +24,6 @@
             render: function () {
                 this.resultNumber = 1;
                 $('.searchPanel').html("");
-
                 var totalHitsNumber = this.searchResults.getTotalHits();
                 var totalHits = "تعداد کل نتایج:  " + totalHitsNumber;
                 var allHits = $("<p/>");
@@ -45,8 +44,6 @@
                 if (!this.endOfSearch) {
                     var currentScroll = Math.abs(Math.floor(this.$el.position().top));
                     var divHeight = $(this.el).height();
-                    if (!this.scrollFlag)
-                        this.scrollFlag = true;
                     if ((divHeight - currentScroll) < this.scrollOffset+200) {
                         var start = this.loadCount * this.resultsCount;
                         var end = start + this.resultsCount;
@@ -57,6 +54,7 @@
             loadResult: function (query, start, end) {
                 this.searchQuery = query;
                 this.loadCount = 1;
+                this.allowLoadMore = false;
                 showLoading();
                 var that = this;
                 $.ajax({
@@ -69,6 +67,7 @@
                             var results = new app.SearchResultItems(data.ReturnValue);
                             that.searchResults = results;
                             that.render();
+                            that.allowLoadMore = true;
                             hideLoading();
                         },
                     error: function (data) {
@@ -84,10 +83,12 @@
                 });
                
             },
-            loadMoreResults: function(query, start, end) {
+            loadMoreResults: function (query, start, end) {
+                if (!this.allowLoadMore)
+                    return;
                 var that = this;
                 //    showLoading();
-
+                this.allowLoadMore = false;
                 $.ajax({
                     type: "GET",
                     url: ajaxPath.Search_Result + "?query=" + query + "&start=" + start + "&end=" + end,
@@ -97,6 +98,7 @@
                             if (!checkResponse(data)) return;
                             var results = new app.SearchResultItems(data.ReturnValue);
                             var totalHits = results.getTotalHits();
+                            that.allowLoadMore = false;
                             if (end > totalHits) {
                                 end = totalHits;
                                 this.endOfSearch = true;
@@ -107,7 +109,6 @@
                                 that.resultNumber++;
                                 $(that.el).append(resultItem.el);
                             }
-                            that.scrollFlag = false;
                             hideLoading();
                         },
                     error: function (data) {

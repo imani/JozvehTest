@@ -35,15 +35,16 @@
                         if (volume.getVolumeNumber() === 0)
                             title = volume.getBook().getBookName();
 
-                        var tab=$("#bookletPanel").meshkatTab("getTabById","volume" + volume.getVolumeId());
-                         
+                        var tab = $("#bookletPanel").meshkatTab("getTabById", "volume" + volume.getVolumeId());
+
+                        var targetParagraphId = (app.loadParagraphId !== undefined ? app.loadParagraphId : app.bookletView.TOC.getBookParagraphId());
                         if (tab === null) {
-                            app.currentVolumeView = new app.VolumeView({ model: volume, paragraphId: app.bookletView.TOC.getBookParagraphId() });
+                            app.currentVolumeView = new app.VolumeView({ model: volume, paragraphId: targetParagraphId });
                             $("#bookletPanel").meshkatTab("addTab", title, app.currentVolumeView, "volume" + volume.getVolumeId());
                         } else {
                             $("#bookletPanel").meshkatTab("selectTab", tab);
                             app.currentVolumeView = $(tab).data().view;
-                            app.currentVolumeView.gotoParagraph(app.bookletView.TOC.getBookParagraphId());
+                            app.currentVolumeView.gotoParagraph(targetParagraphId);
                         }
                         //fill CommentType Of ComboBox
                         app.commentsView.fillTypes(app.currentVolumeView.model.getBook().getBookId(), $("#cboNewCommentType"));
